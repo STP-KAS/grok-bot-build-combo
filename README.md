@@ -1,0 +1,71 @@
+> **Experimental. We are just trying this.**
+>
+> [Disclaimer](DISCLAIMER.md)
+
+# Combo: Grok Bot and Grok Build
+
+**Goal.** One TN10 test of both senders on one clock, after the usage reset. Friday 9 Oct 2026, 21:30 UTC, for 8 hours, ending Saturday 10 Oct 2026, 05:30 UTC. If that day is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours, ending Tuesday 14 Oct 2026, 05:30 UTC.
+
+The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026. The combo has not been run. This page does not give the storm GO, does not lock the plan, and does not start a sender.
+
+The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md). If this hub and that plan disagree, the plan wins.
+
+## Two prompts
+
+| Who | Paste this | Wallet | Where it sends |
+|---|---|---|---|
+| Grok Build, on the desk | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Build only | Public TN10 nodes for the paced steps. The synced desk node only on the long hold and the uncapped max. |
+| Grok Bot, on the box | [PROMPT-BOT.md](PROMPT-BOT.md) | Bot only | The box node n0 only. |
+
+Each prompt is for one side. Neither spends the other wallet.
+
+## Clock
+
+T0 is **21:30 UTC**. The first load step is **10 minutes later**.
+
+| | Friday 9 Oct 2026 | Monday 13 Oct 2026 |
+|---|---|---|
+| T0, B0 starts, lane senders off | 21:30 UTC | 21:30 UTC |
+| First TPS step, the 2× load | 21:40 UTC | 21:40 UTC |
+| Paced table ends, T0+175 | Sat 10 Oct 00:25 UTC | Tue 14 Oct 00:25 UTC |
+| Storm ends | Sat 10 Oct 05:30 UTC | Tue 14 Oct 05:30 UTC |
+
+B0 is 10 minutes. Both lane senders stay off. The plan keeps the box probes and the box ordered stream running in B0. Build sends nothing in B0, including its own ordered stream.
+
+## From the prompt to the first TPS
+
+The prompt does not start the storm. It waits until both of these exist, and until the clock is at the first time in the second:
+
+1. A storm GO from stp, separate from any earlier dry-run GO.
+2. `steps-utc.json`, with a UTC start and a UTC end for every step.
+
+When those two are in hand before 21:30 UTC, the first TPS step starts at **21:40 UTC**. That is **10 minutes** after T0.
+
+Pasting a prompt without those two files stops the side that was pasted. It does not arm a countdown.
+
+Read at **2026-10-07T19:00:19Z**. The calendar gap from that read to 21:40 UTC on 9 Oct is **50 hours 40 minutes**. That gap is a wait. The storm GO and `steps-utc.json` were not in hand at that read.
+
+The 6 Oct desk dry run has no logged "prompt pasted at" time. Its first numbers are not a prompt-to-start measurement.
+
+## Checks at 2026-10-07T19:00:19Z
+
+| Check | Result |
+|---|---|
+| Build prompt | Written here, and the public paste-in is [GROK-BUILD-PROMPT.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/GROK-BUILD-PROMPT.md). It does not start the storm. |
+| Bot prompt | Written here. The public [BOT-TPS.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/BOT-TPS.md) is rate advice. It is not a go prompt. |
+| Desk node | testnet-10, kaspad 2.1.0, synced, UTXO index on, mempool 0. |
+| Six public names | All six answered testnet-10, kaspad 2.1.0, synced, UTXO index on. Mempool: vector-10 215, proton-10 550, electron-10 550, muon-10 4217, quark-10 612, neutrino-10 549. |
+| Bot node n0 | Not read. This desk has no shell on the box. |
+| Free space on the bot disk | **Not measured.** Last figure in the plan: about 44 GB free on Monday 5 Oct 2026, ~19:15 UTC. The go line is at least 35 GB free at T0. Below 28 GB, no storm. |
+| Desk disk | Not the bot disk. |
+
+## Still open before a storm that claims the gate
+
+- n0 match of the desk dry-run ids
+- box dry run
+- 35 GB free on the bot disk at T0
+- plan lock, which stays with stp
+- storm GO
+- `steps-utc.json`
+
+A storm GO that leaves one of the first three open has to name it. Fee for the long hold stays 200 and 300 sompi/gram. The cap stays 600.
