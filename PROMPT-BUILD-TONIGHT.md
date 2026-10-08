@@ -10,11 +10,17 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 ## Goal
 
-Hold the desk side of the same night.
+The test is the heavy one already written. Full load. Full monitoring. It is not announced. Same goal as [PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md).
 
-The bot brings n0 back and reports three readings: free disk, the box dry run, and the n0 match. This side runs the desk from 18:00 UTC to 20:00 UTC and reports the desk lines. 20:00 UTC is the stop.
+Not announced means do not post it, do not ping anyone, and leave the public result sections empty. The logs stay complete. A quiet test is not a smaller test, and it is not a thinner log.
 
-You know the checkout. Do that. Report the desk. Then do the last act named below.
+Full load is the storm already written in the measurement plan and in this repo: paced steps through max, both sides, probes, the ordered stream, and the per-second logs. Friday 21:30 UTC, or Monday 13 Oct 21:30 UTC. Tonight stays the checkout size already written in [tonight-8-oct](tonight-8-oct/PLAN.md). This page does not start either one.
+
+Full monitoring is the set already written: per-second submit and accept, per-transaction times, mempool by node name, disk, NTP, the n0 match, the saturation rule, mining share, probes at about 450 per tier per step, and the ordered stream. Five ids stay in the local log. On tonight's checkout, keep every monitor row that [tonight-8-oct](tonight-8-oct/MONITOR.md) already names. Drop none of them.
+
+The bot brings n0 back and reports free disk, the box dry run, and the n0 match. This side runs the desk from 18:00 UTC to 20:00 UTC and reports the desk lines. 20:00 UTC is the stop.
+
+You know the checkout. Do that at full monitoring. Do not shrink it. Then do the last act named below.
 
 ## Miners
 
