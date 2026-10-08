@@ -75,7 +75,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 19:30 | R5 | not measured | up | 10 | not measured | 647.9 | not measured | not measured | −0.1109 s | not measured | not measured | 1706 | 1665 | see the 19:30 read | synced, lag 1 s, blueScoreDiff 44 | round 7, depth at cap, 0 rejects |
 | 19:40 | R5 | not measured | up | 10 | not measured | 649.7 | not measured | not measured | −0.1113 s | not measured | not measured | 2225 | 2165 | see the 19:40 read | synced, lag 83 s, blueScoreDiff 66 | round 7, depth at cap, 0 rejects |
 | 19:50 | R5 | not measured | up | 10 | not measured | 650.2 | not measured | not measured | −0.1118 s | not measured | not measured | 1780 | 1724 | see the 19:50 read | synced, lag 34 s, blueScoreDiff 98 | round 9, depth at cap, 0 rejects |
-| 20:00 | stop | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | both sessions stop |
+| 20:00 | stop | not measured | up | 0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | 0 | 0 | not read | not read | x10 stopped 19:57:41Z. Ten restored 20:04:50Z through 20:13:37Z. Node was up at the 20:02:27Z read. |
 
 ### Row 18:20, read 2026-10-08T18:20:20Z
 
@@ -153,7 +153,10 @@ The real test is postponed. n0 was still syncing when round 4 started. These rou
 | 6 u10 | 2026-10-08 | 19:02:53 | 19:03:41 | 10 | desk node | 5,040 tx/s | Node faulted again, same access violation. Senders stopped. Node and 18 miners restored. Senders left at 0. |
 | 7 v10 | 2026-10-08 | 19:13:37 | 19:41:20 | 10 | desk node | 5,040 tx/s | Stopped to try eleven senders. It had been submitting with 0 rejects. |
 | 8 w11 | 2026-10-08 | 19:42:01 | 19:42:12 | 11 | desk node | 5,544 tx/s | Free RAM 0.4 GB. About 3,400 rejects per second, orphans. Stopped. |
-| 9 x10 | 2026-10-08 | 19:42:37 | 20:13:37 planned | 10 | desk node | 5,040 tx/s | Restored. Opening seconds 0 rejects. Eleven does not fit on this desk. |
+| 9 x10 | 2026-10-08 | 19:42:37 | 19:57:41 | 10 | desk node | 5,040 tx/s | Stopped at 19:57:41Z while a change to nine senders was being set up. Nine was not armed. |
+| 10 a10 | 2026-10-08 | 20:04:50 | 20:13:37 planned | 10 | desk node | 5,040 tx/s | Same shape restored after the mempool drained to 1 and the fee was 100. Opening seconds 0 rejects. Depth on each sender at its lane cap. |
+
+Round 9 was stopped at 19:57:41Z. No nine-sender process was started. The desk mempool drained from about 33,211 to 1, and the fee quote returned to 100. Ten senders, a01 through a10, were armed at 20:04:50Z through the same planned end, 20:13:37Z. Parts 0/10 through 9/10. Target 504 tx/s each. Desk node. Depth 4. Four connections. Fee frozen at 100 and 150. Per-transaction logging off. Lane counts: 1008, 789, 1008, 858, 828, 797, 1008, 749, 1008, 780. Free RAM with all ten up: 2.9 GB. The first measured seconds had 0 rejects, and each sender's depth sat on its own cap (lanes times 4).
 
 ### Desk reading, 2026-10-08T18:14:08Z
 
