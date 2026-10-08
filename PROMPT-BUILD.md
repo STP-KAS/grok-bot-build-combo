@@ -20,6 +20,12 @@ The **21:00 UTC** in stp's DM that morning is not T0. Do not start at 21:00. Do 
 
 Comparison comes to us first. Do not send him this run from the paste. Do not ping him.
 
+## Update the checkout PDF you made from this git
+
+If you are the session that made the checkout PDF from https://github.com/STP-KAS/grok-bot-build-combo , update that same PDF from current main before any send. Do not make a second PDF. Do not change the layout. Do not send it to him.
+
+Write only the 8 Oct changes: his counter beside our clock, the minute line with the id cells still empty, 7 Oct closed, and the hours after 00:25 left unnamed until stp chooses. No key, no seed, no address, no txid.
+
 ## Before any send
 
 Stop unless all three are true:
