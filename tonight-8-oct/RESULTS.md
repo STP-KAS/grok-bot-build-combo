@@ -150,7 +150,7 @@ The real test is postponed. n0 was still syncing when round 4 started. These rou
 | 3 k3 | 2026-10-08 | 18:01:20 | 18:22:36 | 6 | desk node | 3,024 tx/s | Stopped so round 4 could use the coins. 1,215 aligned seconds. Submit mean 2,191.2 tx/s. Local accept_seen mean 2,142.9 tx/s. 0 rejects. No summary line. |
 | 4 h10 | 2026-10-08 | 18:24:48 | 18:37:37 | 10 | desk node | 5,040 tx/s | Stopped so a larger set could be tried. 714 aligned seconds. Submit mean 1,854.8 tx/s. Local accept_seen mean 1,750.7 tx/s. 0 rejects. |
 | 5 q10 | 2026-10-08 | 18:48:19 | 19:00:06 | 10 | desk node | 5,040 tx/s | Desk node process gone at 19:00:06Z. No shutdown line. Senders then submitted 0. |
-| 6 u10 | 2026-10-08 | 19:02:53 | 19:48:19 planned | 10 | desk node | 5,040 tx/s | Node restarted and synced. Miners restored to 18. Opening seconds submitted 5,040 with 0 rejects. |
+| 6 u10 | 2026-10-08 | 19:02:53 | 19:03:41 | 10 | desk node | 5,040 tx/s | Node faulted again, same access violation. Senders stopped. Node and 18 miners restored. Senders left at 0. |
 
 ### Desk reading, 2026-10-08T18:14:08Z
 
@@ -362,6 +362,10 @@ Opening aligned seconds, all ten logs, 0 rejects:
 |---|---:|---:|
 | 19:02:58 | 5040 | 2139 |
 | 19:02:59 | 5040 | 1958 |
+
+### Round 6 stopped, 2026-10-08T19:03:41Z
+
+The restarted desk node faulted at 19:03:38Z. Windows Application Error 1000, exception `0xc0000005`, fault offset `0x1931c7a`, same offset as the 19:00:07Z fault. The kaspad log's last line is 19:03:41Z, an ordinary throughput line, with no shutdown line. The ten senders were still alive. They were stopped. The node was started again at 19:05Z, same flags, no RAM scale. It came back synced, UTXO index on, mempool 7. The 18 miners were started again. Sender count is 0. The ten-sender load hit this fault twice, so it was not armed again on this start.
 
 ### Runs left unscored
 
