@@ -71,7 +71,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 18:50 | R3 | not measured | up | 10 | not measured | 631.9 | not measured | not measured | −0.1109 s | not measured | not measured | 2245 | 2137 | see the 18:50 read | synced, lag 3 s, blueScoreDiff 14 | round 5, depth at cap, 0 rejects |
 | 19:00 | R4 | not measured | node down | 10 | not measured | 646.1 | not measured | not measured | −0.1102 s | not measured | not measured | 1653 | 1602 | see the 19:00 read | synced, lag 3 s, blueScoreDiff 14 | desk node gone at 19:00:06Z |
 | 19:10 | R4 | not measured | up | 10 | not measured | 645.9 | not measured | not measured | −0.1137 s | not measured | not measured | 4657 | 1990 | see the 19:10 read | synced, lag 3 s, blueScoreDiff 2 | late read 19:12Z; hour armed 19:13:37Z |
-| 19:20 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | Friday call starts |
+| 19:20 | R5 | not measured | up | 10 | not measured | 645.8 | not measured | not measured | −0.1111 s | not measured | not measured | 2067 | 2004 | see the 19:20 read | synced, lag 4 s, blueScoreDiff 7 | round 7, depth at cap, 0 rejects |
 | 19:30 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:40 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:50 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
@@ -406,6 +406,26 @@ Opening aligned seconds, all ten logs, 0 rejects:
 | 19:13:47 | 4279 | 2192 | 2930 |
 
 The table rate above is the mean of these four seconds, 4,657 submit/s and 1,990 local accept_seen/s.
+
+### Row 19:20, read 2026-10-08T19:20:18Z
+
+Round 7's ten senders were up. The desk node was up. Free RAM 4.9 GB. Halt file first line `halt`. Miners 18, not switched. Disk free 645.8 GB.
+
+Desk NTP vs time.windows.com, five samples from 19:20:20Z: −0.1110730 s, −0.1108945 s, −0.1111602 s, −0.1112930 s, −0.1112215 s. Mean −0.1111 s. Usage was not measured.
+
+Rates are eleven aligned seconds, 19:19:55Z through 19:20:05Z, all ten logs, 0 rejects. Submit 2596, 2764, 2684, 2026, 2324, 2429, 2102, 1657, 1290, 1516, 1343. Mean 2,066.5 tx/s. Local accept_seen 2374, 2808, 2651, 1834, 2298, 2427, 2047, 1580, 1278, 1379, 1368. Mean 2,004 tx/s. Depth was 4,032 on every one of those seconds.
+
+| Node | Mempool | Normal fee |
+|---|---:|---:|
+| vector-10.kaspa.green | 378 | 100 |
+| proton-10.kaspa.stream | 1778 | 151 |
+| electron-10.kaspa.blue | 1778 | 151 |
+| muon-10.kaspa.blue | 1229 | 158 |
+| quark-10.kaspa.red | 1778 | 151 |
+| neutrino-10.kaspa.stream | 1778 | 151 |
+| desk node | 33634 | 183 |
+
+The senders are still on the fee frozen at the arm, 100 and 150. The desk quote is 183, still under 200. Indexer: `isSynced` true, `acceptedTxBlockTimeDiff` 4 seconds, `blueScoreDiff` 7.
 
 ### Runs left unscored
 
