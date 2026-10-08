@@ -4,6 +4,12 @@ Paste this into Grok Build on the desk. This file does not start the storm, does
 
 If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md), stop and ask stp. The plan wins. The longer desk paste-in is [GROK-BUILD-PROMPT.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/GROK-BUILD-PROMPT.md). The run, once the storm GO and `steps-utc.json` exist, is [TESTDAY.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/TESTDAY.md).
 
+## Which file is the Friday paste
+
+This file is the paste until stp says otherwise.
+
+After the 8 Oct checkout, Build writes [plan/GROK-BUILD-PROMPT-AFTER-8-OCT.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/GROK-BUILD-PROMPT-AFTER-8-OCT.md) from the checkout result and from Kaspa Pulse's input. Do not use that file while it still says it is not written yet. Do not use it at all unless stp has said it replaces this file. The checkout note is [plan/AFTER-8-OCT.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/AFTER-8-OCT.md).
+
 ## Goal
 
 One combo with the Grok bot, on one UTC clock, after the usage reset stp marked OK on 7 Oct 2026.
