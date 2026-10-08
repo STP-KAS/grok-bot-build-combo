@@ -62,7 +62,9 @@ The first TPS step is the 2× load at **21:40 UTC**. Hold each load step for 15 
 
 Log the desk miner count at each phase start. Do not switch the miners. stp does that.
 
-Per-transaction logs stay on. Times are UTC with milliseconds and `Z`.
+Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. The 8 Oct high-rate rounds turned that log off. This run does not.
+
+The next run's monitor is [plan/NEXT-RUN-MONITOR.md](https://github.com/STP-KAS/tn10-locus/blob/main/plan/NEXT-RUN-MONITOR.md). Do every Build line on that page. The 10-minute row still goes to `tonight-8-oct/RESULTS.md` until the storm sheet exists, and it includes desk disk, NTP, usage or **not measured**, submit tx/s, accepted tx/s, the six public mempools by name, locus mempool, indexer health, free RAM, and the miner count. Per minute the node cell is `locus`. Five tx ids stay in the local log. A blank required line is **not measured** and fails the pass. His accepted count is his.
 
 ## Minute log, on top of the per-second log
 

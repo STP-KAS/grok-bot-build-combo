@@ -50,6 +50,8 @@ The miners-off control is the same 2× target with the miners off. The box sched
 
 Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. Match Build's ids on n0. That match is this side's job.
 
+The next run's monitor is [plan/NEXT-RUN-MONITOR.md](https://github.com/STP-KAS/tn10-locus/blob/main/plan/NEXT-RUN-MONITOR.md). Print one block every 10 minutes for the desk to copy: UTC, phase, session, sender count, box disk GB, NTP offset, usage or **not measured**, n0 synced, n0 lag seconds, n0 mempool, n0 CPU, submit tx/s, accepted tx/s, rejects, miner count. If n0 is unsynced or lag is over 300 seconds, sender count is 0 and the block says `waiting`. A missing block stays **not measured** and fails this side's part of the pass. Do not point the runners at the desk.
+
 ## Minute log, on top of the per-second log
 
 Every UTC minute, one local line per sender:
