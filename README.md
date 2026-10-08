@@ -14,6 +14,8 @@ The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026.
 
 Checkout, 20:00–22:00 local (18:00–20:00 UTC). The folder is [tonight-8-oct](tonight-8-oct/README.md). Paste [PROMPT-BOT.md](tonight-8-oct/PROMPT-BOT.md) into the bot and [PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md) into Grok Build at 19:50 local. The morning monitor reading is in [RESULTS.md](tonight-8-oct/RESULTS.md). Kaspa Pulse's input is in [PULSE.md](tonight-8-oct/PULSE.md). Tonight is not the storm. The root prompts below are the Friday paste.
 
+On 8 Oct he read the checkout PDF and pointed his counter at that same 18:00–20:00 UTC, and at Friday 21:25 UTC through Saturday 05:35 UTC. Comparison comes to us first. The pastes now ask for a per-minute sent count, the node name, and five tx ids in the local log. Git still gets no ids. The DM times 20:00 UTC tonight and 21:00 UTC Friday are not these clocks.
+
 The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md). If this hub and that plan disagree, the plan wins.
 
 ## Two prompts
@@ -37,6 +39,8 @@ T0 is **21:30 UTC**. The first load step is **10 minutes later**.
 | Storm ends | Sat 10 Oct 05:30 UTC | Tue 14 Oct 05:30 UTC |
 
 B0 is 10 minutes. Both lane senders stay off. The plan keeps the box probes and the box ordered stream running in B0. Build sends nothing in B0, including its own ordered stream.
+
+His Friday counter is 21:25 UTC to Saturday 05:35 UTC. That is five minutes either side of this table. It does not move T0.
 
 ## From the prompt to the first TPS
 
@@ -73,5 +77,6 @@ The 6 Oct desk dry run has no logged "prompt pasted at" time. Its first numbers 
 - plan lock, which stays with stp
 - storm GO
 - `steps-utc.json`
+- the hours after 00:25 UTC: name them, or end the storm at 00:25. Not chosen.
 
 A storm GO that leaves one of the first three open has to name it. Fee for the long hold stays 200 and 300 sompi/gram. The cap stays 600.
