@@ -66,7 +66,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 18:00 | R0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | window opens |
 | 18:10 | R0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 18:20 | R1 | not measured | up | 6 | not measured | 646.7 | not measured | not measured | −0.1087 s | not measured | not measured | 2161 | 2472 | not read | synced, lag 1 s, blueScoreDiff 15 | k3 pre-test still on |
-| 18:30 | R2 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | sample only with rehearsal GO |
+| 18:30 | R2 | not measured | up | 10 | not measured | 646.3 | not measured | not measured | −0.1097 s | not measured | not measured | 1628 | 1570 | not read | synced, lag 2 s, blueScoreDiff 1 | round 4 still on; written sample not started |
 | 18:40 | R2 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 18:50 | R3 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | drain |
 | 19:00 | R4 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
@@ -84,6 +84,14 @@ R1 is the quiet phase. Rehearsal GO was not said. The six k3 senders were still 
 Desk NTP vs time.windows.com, five samples from 18:20:22Z: −0.1087247 s, −0.1089591 s, −0.1088037 s, −0.1085677 s, −0.1086893 s. Mean −0.1087 s. `w32tm /query /status` was not run on this row.
 
 Rates are five aligned seconds, 18:20:15Z through 18:20:19Z, all six logs present: submit 2200, 2265, 2114, 2234, 1991 (mean 2160.8). Local accept_seen 3330, 2135, 2970, 1955, 1970 (mean 2472). That accept figure is the sender's per-second field. It is not n0, and it is not Kaspa Pulse's chain count. The six public pools and the desk-node mempool were not read on this row. One kaspad. Miners 18, not switched. Halt file first line `halt`. Arm file first line `fee2h`. Measure STOP absent. Indexer: database `isSynced` true, `acceptedTxBlockTimeDiff` 1 second, `blueScoreDiff` 15.
+
+### Row 18:30, read 2026-10-08T18:30:16Z
+
+R2 is the written sample phase. Rehearsal GO was not said. The real test is postponed while n0 is still syncing, so the 62 tx/s sample did not start. Round 4's ten senders were still inside the one-hour arm.
+
+Desk NTP vs time.windows.com, five samples from 18:30:18Z: −0.1098801 s, −0.1096296 s, −0.1094852 s, −0.1097370 s, −0.1096650 s. Mean −0.1097 s.
+
+Rates are eleven aligned seconds, 18:29:55Z through 18:30:05Z, all ten logs present, 0 rejects. Submit 2063, 1565, 1820, 1972, 1460, 2238, 576, 1393, 1315, 1422, 2080. Mean 1,627.6 tx/s. Local accept_seen 1974, 1497, 1738, 1933, 1440, 2144, 586, 1311, 1283, 1258, 2103. Mean 1,569.7 tx/s. That accept figure is the sender log, not n0. Depth was 4,032 on every one of those seconds, which is the arm cap. The six public pools and the desk-node mempool were not read. One kaspad. Miners 18, not switched. Halt file first line `halt`. Measure STOP absent. Indexer: database `isSynced` true, `acceptedTxBlockTimeDiff` 2 seconds, `blueScoreDiff` 1.
 
 ## Sample block
 
