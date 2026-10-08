@@ -1,6 +1,6 @@
 # Prompt bot reset
 
-Paste this into the Grok bot on the box when usage resets on 8 Oct 2026. This file does not start the storm, does not lock the plan, and does not spend.
+Paste this into the Grok bot on the box when you receive it. stp is sending it early and will be away. This file does not start the storm and does not lock the plan.
 
 If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md), stop and ask stp. The plan wins.
 
@@ -12,7 +12,7 @@ The test is the heavy one already written. Full load. Full monitoring. It is not
 
 Not announced means do not post it, do not ping anyone, and leave the public result sections empty. The logs stay complete. A quiet test is not a smaller test, and it is not a thinner log.
 
-Full load is the storm already written in the measurement plan and in this repo: paced steps through max, both sides, probes, the ordered stream, and the per-second logs. Friday 21:30 UTC, or Monday 13 Oct 21:30 UTC. Tonight stays the checkout size already written in [tonight-8-oct](tonight-8-oct/PLAN.md). This page does not start either one.
+Full load is the storm already written in the measurement plan and in this repo: paced steps through max, both sides, probes, the ordered stream, and the per-second logs. Friday 21:30 UTC, or Monday 13 Oct 21:30 UTC. Tonight stays the checkout size already written in [tonight-8-oct](tonight-8-oct/PLAN.md). This page does not move either clock.
 
 Full monitoring is the set already written: per-second submit and accept, per-transaction times, mempool by node name, disk, NTP, the n0 match, the saturation rule, mining share, probes at about 450 per tier per step, and the ordered stream. Five ids stay in the local log. On tonight's checkout, keep every monitor row that [tonight-8-oct](tonight-8-oct/MONITOR.md) already names. Drop none of them.
 
@@ -22,7 +22,21 @@ This page's job is to bring n0 back, synced, and report the three readings that 
 2. The plan's box dry run, on this box, after n0 is synced.
 3. The n0 match of the 6 Oct desk dry-run ids, 20:08–20:29 UTC. Write matched/total, or not measurable.
 
-You know the work. Do that. Report the three. Then stop.
+You know the work. Do that. Report the three.
+
+## Prepare now
+
+Start the moment you receive this page. Do not wait for another message. stp will not be at the keyboard.
+
+Do whatever these pages already name to be ready for the heavy test. Do not invent a new mode, a new fee, or a new clock. If you are not ready without a run, do that run before the real test. This sentence is the permission for that run.
+
+On this box the run is the plan's box dry run. Do it after n0 is synced and lag is at or under 300 seconds. Read free disk first. At or under 19 GB, do not resync and do not spend. Below 28 GB, do not spend. From 28 to 35 GB, do not spend. At 35 GB or more, the dry run may go. Log it in full, then stop that run.
+
+The dry run is not the storm and it is not the max step. If you are already ready, do not add an extra run.
+
+Tonight's checkout sample stays the size in tonight-8-oct. If that sample is still required and the clock is inside 18:30:00Z–18:45:00Z, run it. This page covers that sample. Do not start it after 18:45. Do not start a sender at 20:00. If n0 is still unsynced at 18:00, write not measured and keep the checkout senders off.
+
+The real test is still the storm. It still needs a storm GO and `steps-utc.json` from stp. This page does not give those.
 
 ## Report
 
