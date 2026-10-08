@@ -10,6 +10,16 @@ One combo with the Grok bot, on one UTC clock, after the usage reset stp marked 
 
 Friday 9 Oct 2026, 21:30 UTC, for 8 hours, ending Saturday 10 Oct 2026, 05:30 UTC. If that day is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours, ending Tuesday 14 Oct 2026, 05:30 UTC.
 
+## His counter is not our T0
+
+Kaspa Pulse, 8 Oct 2026, after the checkout PDF. The 9th works on his side. He counts Friday **21:25 UTC** through Saturday 10 Oct 2026 **05:35 UTC**, two nodes, a few minutes either side of our window. Our T0 stays **21:30 UTC**. The first TPS step stays **21:40 UTC**. Our end stays **05:30 UTC**.
+
+The **21:00 UTC** in stp's DM that morning is not T0. Do not start at 21:00. Do not start at 21:25.
+
+7 Oct is closed. Last submit 18:38:39 UTC. His window started 18:53. He counted the chain after the run. No conflict. Do not explain it. Do not call a figure a ceiling.
+
+Comparison comes to us first. Do not send him this run from the paste. Do not ping him.
+
 ## Before any send
 
 Stop unless all three are true:
@@ -20,6 +30,8 @@ Stop unless all three are true:
 
 The n0 match, the box dry run, and 35 GB free on the bot disk are still open. If the storm GO does not name any of those it is leaving open, stop and ask.
 
+The hours from 00:25 UTC to 05:30 UTC have no named phase. He asked to name them (long hold, max, drain) or to end the storm at 00:25. This file does not choose. If the storm GO does not choose, stop and ask before any send. Do not write names for those hours. Do not end the storm at 00:25 on your own.
+
 ## This side only
 
 - TN10 only. Network `testnet-10`.
@@ -28,7 +40,7 @@ The n0 match, the box dry run, and 35 GB free on the bot disk are still open. If
 - Long hold and the uncapped max: two signers on each physical machine, depth 2, in-flight 64, fee frozen at 200 and 300 sompi/gram, cap 600, plus the synced desk node on its own coins.
 - Never send to n0, to `bore.pub`, or to `159.223.110.159`.
 - Leave the 3 Oct halt on the older fleet in place.
-- Keys stay on the desk. Do not print a key, a seed, or a wallet file.
+- Keys stay on the desk. Do not print a key, a seed, or a wallet file. Do not print an address.
 
 ## When the first TPS starts
 
@@ -39,3 +51,17 @@ The first TPS step is the 2× load at **21:40 UTC**. Hold each load step for 15 
 Log the desk miner count at each phase start. Do not switch the miners. stp does that.
 
 Per-transaction logs stay on. Times are UTC with milliseconds and `Z`.
+
+## Minute log, on top of the per-second log
+
+Every UTC minute, one local line per sender:
+
+- minute, `YYYY-MM-DDTHH:MM:00Z`
+- sender id
+- node: the public TN10 name, or the desk node on the long hold and the uncapped max. Not the word "public". Not n0. This side never posts to n0. Mempool is per node.
+- tx_sent: how many transactions that sender submitted in that minute
+- five tx ids from that minute, spread across it, not the first five. Five is the reading of "a handful". He checks them on chain one by one.
+
+His accepted count is his. Do not invent it. Our accepted figure stays in the per-second log.
+
+Do not print the id list. The five ids stay in the local log and in the checkout PDF if the desk already writes one. If it does not, write a local `checkout-minute.csv` with those columns. They do not go in git.
