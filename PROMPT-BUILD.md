@@ -1,6 +1,6 @@
 # Prompt for Grok Build
 
-Paste this into Grok Build on the desk. This file does not start the storm, does not lock the plan, and does not spend.
+Paste this into Grok Build on the desk. Sending this GitHub to Grok Build or to the bot means go: start the operation. This file does not lock the questions plan and does not spend. The node order is [TWO-NODES.md](TWO-NODES.md).
 
 If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md), stop and ask stp. The plan wins. The longer desk paste-in is [GROK-BUILD-PROMPT.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/GROK-BUILD-PROMPT.md). The run, once the storm GO and `steps-utc.json` exist, is [TESTDAY.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/TESTDAY.md).
 
@@ -36,7 +36,7 @@ Write only the 8 Oct changes: his counter beside our clock, the minute line with
 
 Stop unless all three are true:
 
-1. stp has given the storm GO. That GO is separate from the dry-run GO. This file does not give it.
+1. This GitHub has been sent to Grok Build or to the bot. That is the storm GO. A dry-run GO is not this.
 2. `steps-utc.json` is in hand. Do not invent the timetable.
 3. The clock is at or after the first time in that file.
 
@@ -48,11 +48,10 @@ The hours from 00:25 UTC to 05:30 UTC have no named phase. He asked to name them
 
 - TN10 only. Network `testnet-10`.
 - The Build wallet only. Do not spend the Bot wallet.
-- Paced steps: public TN10 nodes. Four fixed processes. Depth 2. In-flight 48. Four connections. No auto-scale. No mempool pause inside a step.
-- Long hold and the uncapped max: two signers on each physical machine, depth 2, in-flight 64, fee frozen at 200 and 300 sompi/gram, cap 600, plus the synced desk node on its own coins.
-- Never send to n0, to `bore.pub`, or to `159.223.110.159`.
-- Leave the 3 Oct halt on the older fleet in place.
-- Keys stay on the desk. Do not print a key, a seed, or a wallet file. Do not print an address.
+- Every step goes to locus, the first desk kaspad, on loopback Borsh. Four fixed processes. Depth 2. In-flight 48. Four connections. No auto-scale. No mempool pause inside a step.
+- Long hold and the uncapped max stay on locus: depth 2, in-flight 64, fee frozen at 200 and 300 sompi/gram, cap 600.
+- `bore.pub` and `159.223.110.159` stay closed. Leave the 3 Oct halt on the older fleet in place.
+- Keys stay on the desk. Do not print a key, a seed, or a wallet file.
 
 ## When the first TPS starts
 
@@ -60,7 +59,7 @@ T0 is 21:30 UTC. B0 is the first 10 minutes. Send nothing in B0, in the two sett
 
 The first TPS step is the 2× load at **21:40 UTC**. Hold each load step for 15 minutes, then drain at 0. Do not change rate, fee, depth, or process count inside a step.
 
-Log the desk miner count at each phase start. Do not switch the miners. stp does that.
+Point the miners at desk node B. On the desk that is gRPC `127.0.0.1:16310`. Coinbase pays the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. Mine only while node B is synced. Log the count at each phase start. The bot's runner uses that same node and runs only during the storm. Build keeps sending on locus.
 
 Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. The 8 Oct high-rate rounds turned that log off. This run does not.
 

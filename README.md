@@ -8,11 +8,13 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 **Goal.** One TN10 test of both senders on one clock, after the usage reset. Friday 9 Oct 2026, 21:30 UTC, for 8 hours, ending Saturday 10 Oct 2026, 05:30 UTC. If that day is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours, ending Tuesday 14 Oct 2026, 05:30 UTC.
 
-The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026. The combo has not been run. This page does not give the storm GO, does not lock the plan, and does not start a sender.
+The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026. The combo has not been run. This page does not lock the questions plan.
+
+**Start.** Sending this GitHub to Grok Build or to the bot means go: start the operation.
 
 ## Node split, 8 Oct 2026
 
-[TWO-NODES.md](TWO-NODES.md) is the forward rule. The bot uses n0 when n0 is synced. Build uses its own desk node on every step. The goal is the highest included tx/s the two can hold together. The root table below is the earlier paste. Where they disagree on the node, TWO-NODES.md wins.
+[TWO-NODES.md](TWO-NODES.md) is the forward rule. The bot's runner uses desk node B, the second kaspad on the desk, and it runs only during the storm. Build uses locus, the first desk kaspad, on every step. Miners point at desk node B and pay the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. The goal is the highest included tx/s the two can hold together. The root table below is the earlier paste. Where they disagree on the node, TWO-NODES.md wins.
 
 ## Tonight, Thursday 8 Oct 2026
 
@@ -26,8 +28,8 @@ The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn1
 
 | Who | Paste this | Wallet | Where it sends |
 |---|---|---|---|
-| Grok Build, on the desk | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Build only | Public TN10 nodes for the paced steps. The synced desk node only on the long hold and the uncapped max. |
-| Grok Bot, on the box | [PROMPT-BOT.md](PROMPT-BOT.md) | Bot only | The box node n0 only. |
+| Grok Build, on the desk | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Build only | locus, the first desk kaspad |
+| Grok Bot, on the box | [PROMPT-BOT.md](PROMPT-BOT.md) | Bot only | desk node B, and only during the storm |
 
 Each prompt is for one side. Neither spends the other wallet.
 
