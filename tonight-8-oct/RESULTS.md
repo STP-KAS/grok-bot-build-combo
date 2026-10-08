@@ -68,7 +68,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 18:20 | R1 | not measured | up | 6 | not measured | 646.7 | not measured | not measured | −0.1087 s | not measured | not measured | 2161 | 2472 | not read | synced, lag 1 s, blueScoreDiff 15 | k3 pre-test still on |
 | 18:30 | R2 | not measured | up | 10 | not measured | 646.3 | not measured | not measured | −0.1097 s | not measured | not measured | 1628 | 1570 | not read | synced, lag 2 s, blueScoreDiff 1 | round 4 still on; written sample not started |
 | 18:40 | R2 | not measured | up | 10 | not measured | 632.6 | not measured | not measured | −0.1102 s | not measured | not measured | 3013 | 1697 | see the 18:40 read | synced, lag 2 s, blueScoreDiff 9 | late read 18:47:39Z |
-| 18:50 | R3 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | drain |
+| 18:50 | R3 | not measured | up | 10 | not measured | 631.9 | not measured | not measured | −0.1109 s | not measured | not measured | 2245 | 2137 | see the 18:50 read | synced, lag 3 s, blueScoreDiff 14 | round 5, depth at cap, 0 rejects |
 | 19:00 | R4 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:10 | R4 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:20 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | Friday call starts |
@@ -304,6 +304,28 @@ Late for the 18:40 mark. This is the PDF row: UTC, phase, session, sender count,
 | Indexer | 18:48:32Z. `isSynced` true, `acceptedTxBlockTimeDiff` 2 seconds, `blueScoreDiff` 9. |
 | Rates | After round 5 armed, the four seconds above. |
 | Miners | 18. Not switched. Halt file first line `halt`. |
+
+### Row 18:50, read 2026-10-08T18:50:12Z
+
+Round 5's ten senders were up. Free RAM 5.6 GB. Halt file first line `halt`. Miners 18, not switched.
+
+Desk NTP vs time.windows.com, five samples from 18:50:13Z: −0.1105574 s, −0.1101328 s, −0.1103329 s, −0.1132569 s, −0.1102839 s. Mean −0.1109 s. Usage was not measured.
+
+Rates are ten aligned seconds from 18:49:55Z through 18:50:05Z. The 18:50:02Z second was not in every log, so it is left out. Submit 2880, 2108, 1991, 2757, 2553, 2401, 2205, 1549, 1752, 2252. Mean 2,244.8 tx/s. Local accept_seen 2727, 1968, 1937, 2577, 2470, 2361, 2093, 1469, 1679, 2089. Mean 2,137 tx/s. Rejects 0. Depth was 4,032 on every one of those seconds, the arm cap.
+
+Mempools and the normal-fee quote, read in the same minute:
+
+| Node | Mempool | Normal fee |
+|---|---:|---:|
+| vector-10.kaspa.green | 24829 | 180 |
+| proton-10.kaspa.stream | 24405 | 179 |
+| electron-10.kaspa.blue | 24405 | 179 |
+| muon-10.kaspa.blue | 32713 | 179 |
+| quark-10.kaspa.red | 24405 | 179 |
+| neutrino-10.kaspa.stream | 24405 | 179 |
+| desk node | 34911 | 183 |
+
+The running senders are still on the fee frozen at the arm, 100 and 150. The live quote is higher and still under 200. Indexer: `isSynced` true, `acceptedTxBlockTimeDiff` 3 seconds, `blueScoreDiff` 14.
 
 ### Runs left unscored
 
