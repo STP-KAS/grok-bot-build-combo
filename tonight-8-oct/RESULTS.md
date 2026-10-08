@@ -151,7 +151,9 @@ The real test is postponed. n0 was still syncing when round 4 started. These rou
 | 4 h10 | 2026-10-08 | 18:24:48 | 18:37:37 | 10 | desk node | 5,040 tx/s | Stopped so a larger set could be tried. 714 aligned seconds. Submit mean 1,854.8 tx/s. Local accept_seen mean 1,750.7 tx/s. 0 rejects. |
 | 5 q10 | 2026-10-08 | 18:48:19 | 19:00:06 | 10 | desk node | 5,040 tx/s | Desk node process gone at 19:00:06Z. No shutdown line. Senders then submitted 0. |
 | 6 u10 | 2026-10-08 | 19:02:53 | 19:03:41 | 10 | desk node | 5,040 tx/s | Node faulted again, same access violation. Senders stopped. Node and 18 miners restored. Senders left at 0. |
-| 7 v10 | 2026-10-08 | 19:13:37 | 20:13:37 planned | 10 | desk node | 5,040 tx/s | One hour. Fourteen and twelve were tried first and stopped. These ten opened with 0 rejects. |
+| 7 v10 | 2026-10-08 | 19:13:37 | 19:41:20 | 10 | desk node | 5,040 tx/s | Stopped to try eleven senders. It had been submitting with 0 rejects. |
+| 8 w11 | 2026-10-08 | 19:42:01 | 19:42:12 | 11 | desk node | 5,544 tx/s | Free RAM 0.4 GB. About 3,400 rejects per second, orphans. Stopped. |
+| 9 x10 | 2026-10-08 | 19:42:37 | 20:13:37 planned | 10 | desk node | 5,040 tx/s | Restored. Opening seconds 0 rejects. Eleven does not fit on this desk. |
 
 ### Desk reading, 2026-10-08T18:14:08Z
 
@@ -406,6 +408,8 @@ Opening aligned seconds, all ten logs, 0 rejects:
 | 19:13:47 | 4279 | 2192 | 2930 |
 
 The table rate above is the mean of these four seconds, 4,657 submit/s and 1,990 local accept_seen/s.
+
+Round 7 was stopped at 19:41:20Z to try eleven senders. Eleven armed at 19:42:01Z. Free RAM was 0.4 GB. The opening aligned seconds rejected about 2,972, 3,502, and 3,671 transactions, orphans. That set was stopped. Ten senders were armed again at 19:42:37Z, x01 through x10, for 1,862 seconds, so the planned end stays 20:13:37Z. Fee frozen at 100 and 150. Opening seconds, 0 rejects: 19:42:44Z submit 4,908, 19:42:45Z submit 4,681, 19:42:46Z submit 3,808. Free RAM at that read was 1.1 GB. The desk node was up.
 
 ### Row 19:20, read 2026-10-08T19:20:18Z
 
