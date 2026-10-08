@@ -65,7 +65,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 |---|---|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|
 | 18:00 | R0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | window opens |
 | 18:10 | R0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
-| 18:20 | R1 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | quiet starts |
+| 18:20 | R1 | not measured | up | 6 | not measured | 646.7 | not measured | not measured | −0.1087 s | not measured | not measured | 2161 | 2472 | not read | synced, lag 1 s, blueScoreDiff 15 | k3 pre-test still on |
 | 18:30 | R2 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | sample only with rehearsal GO |
 | 18:40 | R2 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 18:50 | R3 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | drain |
@@ -76,6 +76,14 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 19:40 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:50 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 20:00 | stop | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | both sessions stop |
+
+### Row 18:20, read 2026-10-08T18:20:20Z
+
+R1 is the quiet phase. Rehearsal GO was not said. The six k3 senders were still inside their 1,800 s arm. That is the pre-test, not the rehearsal sample.
+
+Desk NTP vs time.windows.com, five samples from 18:20:22Z: −0.1087247 s, −0.1089591 s, −0.1088037 s, −0.1085677 s, −0.1086893 s. Mean −0.1087 s. `w32tm /query /status` was not run on this row.
+
+Rates are five aligned seconds, 18:20:15Z through 18:20:19Z, all six logs present: submit 2200, 2265, 2114, 2234, 1991 (mean 2160.8). Local accept_seen 3330, 2135, 2970, 1955, 1970 (mean 2472). That accept figure is the sender's per-second field. It is not n0, and it is not Kaspa Pulse's chain count. The six public pools and the desk-node mempool were not read on this row. One kaspad. Miners 18, not switched. Halt file first line `halt`. Arm file first line `fee2h`. Measure STOP absent. Indexer: database `isSynced` true, `acceptedTxBlockTimeDiff` 1 second, `blueScoreDiff` 15.
 
 ## Sample block
 
