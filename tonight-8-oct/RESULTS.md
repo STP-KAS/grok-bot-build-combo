@@ -129,7 +129,18 @@ Private Build readings from this desk on 8 Oct 2026. They are not the rehearsal 
 
 The monitor list is [MONITOR-PLAN.md](MONITOR-PLAN.md). The plan cited for the rules is [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/1335faffbfb5407d7eda665d60203f455813a933/plan/NEXT-STORM-PLAN.md) at `1335faffbfb5407d7eda665d60203f455813a933`. The desk copy of that repo is `2c5235b23d4fdd9a814af4703fafdef01165d3e1`, five commits ahead, and this note does not push it. The checkout this note was added to was `cb960744524f17dd88b0e7f22f2c6c7bb049690d`. This is not a lock.
 
-On the finished runs, the figure used for accepted is the summary line's `accept_seen`. Summing the per-second `accept_seen` field undercounts on this harness. That sum is not used for pre8 or s7.
+On the finished runs that wrote a summary line, the figure used for accepted is that line's `accept_seen`. Summing the per-second `accept_seen` field undercounts on this harness. That sum is not used for pre8 or s7. Round 3 was stopped before it wrote a summary, so its accept figure is the per-second sum.
+
+The real test is postponed. n0 was still syncing when round 4 started. These rounds are desk tests until that sync is done. They are not rehearsal GO, and they are not storm GO.
+
+## Rounds
+
+| Round | Date | Start UTC | End UTC | Senders | Node | Target | What the log showed |
+|---|---|---|---|---:|---|---:|---|
+| 1 pre8 | 2026-10-08 | 15:49:32 | 16:04:33 | 4 | desk node, vector-10.kaspa.green, proton-10.kaspa.stream | 62 tx/s | Summary submit 55,490. Summary accept_seen 55,488. 100% of target. 0 rejects. |
+| 2 s7 | 2026-10-08 | 17:22:11 | 17:52:15 | 7 | vector-10.kaspa.green, proton-10.kaspa.stream, electron-10.kaspa.blue, muon-10.kaspa.blue | 109 tx/s | Summary submit 195,076. Summary accept_seen 195,073. 100% of each sender's target. 0 rejects. |
+| 3 k3 | 2026-10-08 | 18:01:20 | 18:22:36 | 6 | desk node | 3,024 tx/s | Stopped so round 4 could use the coins. 1,215 aligned seconds. Submit mean 2,191.2 tx/s. Local accept_seen mean 2,142.9 tx/s. 0 rejects. No summary line. |
+| 4 h10 | 2026-10-08 | 18:24:48 | 19:24:48 planned | 10 | desk node | 5,040 tx/s | Running. Opening second 18:24:58Z was 5,015 submit and 1,539 local accept_seen. By 18:25:02Z submit was 2,973. 0 rejects in those seconds. |
 
 ### Desk reading, 2026-10-08T18:14:08Z
 
@@ -205,6 +216,39 @@ The plan's saturation rule (§3c) counts our transactions on n0's virtual chain.
 
 The arm cap is 1,008 lanes times depth 4, which is 4,032. The logged depth reached 3,817 to 3,920, so the pipe was near that cap.
 
+### Round 3 closed, 2026-10-08T18:22:36Z
+
+The six senders were stopped at the last second above so round 4 would not spend the same coins. The arm had been 1,800 seconds, with a planned end near 18:31:20Z. This close is short of that end. No summary line was written. Accept here is the sum of the per-second `accept_seen` field.
+
+Aligned seconds, all six logs present: 1,215, from 2026-10-08T18:01:24Z through 2026-10-08T18:22:36Z. Submit 2,662,313, mean 2,191.2 tx/s, 72.5% of the 3,024 target. accept_seen sum 2,603,621, mean 2,142.9 tx/s, 97.8% of that submit sum. Longest run of aligned seconds with accept_seen under 95% of submit: 12 seconds. Zero submit seconds: 0. Rejects: 0. The plan's n0 saturation rule is **not measured**.
+
+| Sender | Seconds | Submit | accept_seen sum | Max depth | Last second UTC |
+|---|---:|---:|---:|---:|---|
+| r1 | 1268 | 463706 | 452339 | 3874 | 18:22:36.601 |
+| r2 | 1268 | 463966 | 454158 | 3820 | 18:22:36.586 |
+| r3 | 1268 | 463148 | 452914 | 3866 | 18:22:37.143 |
+| r4 | 1267 | 462763 | 452177 | 3849 | 18:22:36.614 |
+| r5 | 1267 | 463177 | 453864 | 3920 | 18:22:36.904 |
+| r6 | 1266 | 462276 | 450919 | 3817 | 18:22:36.467 |
+
+### Round 4, ten senders, one hour, started 2026-10-08T18:24:48Z
+
+Ten senders, h01 through h10, parts 0/10 through 9/10. Target 504 tx/s each, 5,040 tx/s together. `via` own. Node: the desk node. Depth 4. Lanes 1,008. Four connections. Fee frozen at 100 and 150 sompi/gram, cap 600. Per-transaction logging is off. Armed for 3,600 seconds. Planned end 2026-10-08T19:24:48Z.
+
+Desk check before the arm, 2026-10-08T18:22:47Z: mempool 0, normal fee 100, 1.5× fee 150, server 2.1.0. Lane coins on the unsplit part were 13,678. Each sender armed at 1,008 lanes.
+
+All ten were alive after the arm. First aligned seconds, all ten logs present, 0 rejects:
+
+| UTC | Submit | Local accept_seen | Max depth |
+|---|---:|---:|---:|
+| 18:24:58 | 5015 | 1539 | 3541 |
+| 18:24:59 | 3798 | 2251 | 3582 |
+| 18:25:00 | 3145 | 1973 | 3728 |
+| 18:25:01 | 2872 | 1412 | 3880 |
+| 18:25:02 | 2973 | 1750 | 3976 |
+
+The first second was on the 5,040 target. Four seconds later the pipe was near the 4,032 depth cap and submit was 2,973. Local accept_seen was still behind submit. This is the opening, not the hour. The plan's n0 saturation rule is **not measured**.
+
 ### Runs left unscored
 
 A four-sender public run and a fifteen-sender public start were stopped so the next coin partition would not spend the same coins. This note does not give them a rate.
@@ -221,8 +265,8 @@ A four-sender public run and a fifteen-sender public start were stopped so the n
 4. k3 uses six senders, a 3,024 tx/s target, the desk node, depth 4, and fee 100 and 150, with per-transaction logging off.
 5. The 18:00 and 18:10 monitor rows were not read at those clocks.
 6. n0 match, bot NTP, bot disk, and usage were not measured.
-
-k3 was still running at the 18:14 UTC snapshot. The six summary lines were not in yet.
+7. Round 3 was stopped at 18:22:36Z, short of its 18:31:20Z arm end, so round 4 could start.
+8. Round 4 is ten senders for one hour on the desk node, target 5,040 tx/s, because the real test is postponed while n0 is still syncing.
 
 ## Stop line
 
