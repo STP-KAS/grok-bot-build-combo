@@ -31,6 +31,10 @@ Each prompt is for one side. Neither spends the other wallet.
 
 Paste [PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md) when usage resets on 8 Oct 2026. The goal is three readings from the box: free disk, the box dry run, and the n0 match. It does not replace [PROMPT-BOT.md](PROMPT-BOT.md) or tonight's paste.
 
+## Prompt build
+
+Paste [PROMPT-BUILD-TONIGHT.md](PROMPT-BUILD-TONIGHT.md) into Grok Build for the test run tonight. Same clocks as the bot reset page. Miners stay on. The desk node stays up and the senders do not use it. It does not replace [PROMPT-BUILD.md](PROMPT-BUILD.md) or [tonight-8-oct/PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md).
+
 ## Clock
 
 T0 is **21:30 UTC**. The first load step is **10 minutes later**.
