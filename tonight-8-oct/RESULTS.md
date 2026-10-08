@@ -69,7 +69,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 18:30 | R2 | not measured | up | 10 | not measured | 646.3 | not measured | not measured | −0.1097 s | not measured | not measured | 1628 | 1570 | not read | synced, lag 2 s, blueScoreDiff 1 | round 4 still on; written sample not started |
 | 18:40 | R2 | not measured | up | 10 | not measured | 632.6 | not measured | not measured | −0.1102 s | not measured | not measured | 3013 | 1697 | see the 18:40 read | synced, lag 2 s, blueScoreDiff 9 | late read 18:47:39Z |
 | 18:50 | R3 | not measured | up | 10 | not measured | 631.9 | not measured | not measured | −0.1109 s | not measured | not measured | 2245 | 2137 | see the 18:50 read | synced, lag 3 s, blueScoreDiff 14 | round 5, depth at cap, 0 rejects |
-| 19:00 | R4 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
+| 19:00 | R4 | not measured | node down | 10 | not measured | 646.1 | not measured | not measured | −0.1102 s | not measured | not measured | 1653 | 1602 | see the 19:00 read | synced, lag 3 s, blueScoreDiff 14 | desk node gone at 19:00:06Z |
 | 19:10 | R4 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
 | 19:20 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | Friday call starts |
 | 19:30 | R5 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | not measured | |
@@ -149,7 +149,8 @@ The real test is postponed. n0 was still syncing when round 4 started. These rou
 | 2 s7 | 2026-10-08 | 17:22:11 | 17:52:15 | 7 | vector-10.kaspa.green, proton-10.kaspa.stream, electron-10.kaspa.blue, muon-10.kaspa.blue | 109 tx/s | Summary submit 195,076. Summary accept_seen 195,073. 100% of each sender's target. 0 rejects. |
 | 3 k3 | 2026-10-08 | 18:01:20 | 18:22:36 | 6 | desk node | 3,024 tx/s | Stopped so round 4 could use the coins. 1,215 aligned seconds. Submit mean 2,191.2 tx/s. Local accept_seen mean 2,142.9 tx/s. 0 rejects. No summary line. |
 | 4 h10 | 2026-10-08 | 18:24:48 | 18:37:37 | 10 | desk node | 5,040 tx/s | Stopped so a larger set could be tried. 714 aligned seconds. Submit mean 1,854.8 tx/s. Local accept_seen mean 1,750.7 tx/s. 0 rejects. |
-| 5 q10 | 2026-10-08 | 18:48:19 | 19:48:19 planned | 10 | desk node | 5,040 tx/s | Running. Twelve senders did not fit in memory. These ten left 2.7 GB free. First four aligned seconds, 0 rejects. |
+| 5 q10 | 2026-10-08 | 18:48:19 | 19:00:06 | 10 | desk node | 5,040 tx/s | Desk node process gone at 19:00:06Z. No shutdown line. Senders then submitted 0. |
+| 6 u10 | 2026-10-08 | 19:02:53 | 19:48:19 planned | 10 | desk node | 5,040 tx/s | Node restarted and synced. Miners restored to 18. Opening seconds submitted 5,040 with 0 rejects. |
 
 ### Desk reading, 2026-10-08T18:14:08Z
 
@@ -326,6 +327,41 @@ Mempools and the normal-fee quote, read in the same minute:
 | desk node | 34911 | 183 |
 
 The running senders are still on the fee frozen at the arm, 100 and 150. The live quote is higher and still under 200. Indexer: `isSynced` true, `acceptedTxBlockTimeDiff` 3 seconds, `blueScoreDiff` 14.
+
+### Row 19:00, read 2026-10-08T19:00:22Z
+
+The desk kaspad process was already gone. Its log's last line is 19:00:06Z and it is an ordinary accepted-block line. There is no shutdown line. Miners were 0. The ten round-5 sender processes were still alive. Free RAM was 12.6 GB. Halt file first line `halt`. Desk disk free 646.1 GB.
+
+Desk NTP vs time.windows.com, five samples from 19:00:23Z: −0.1102388 s, −0.1099277 s, −0.1103799 s, −0.1100279 s, −0.1101982 s. Mean −0.1102 s. Usage was not measured.
+
+The last live aligned seconds, 18:59:55Z through 19:00:05Z, ten logs, 0 rejects, depth 4,032: submit 1376, 2056, 1724, 2285, 1287, 920, 1810, 1871, 1501, 1698. Mean 1,652.8 tx/s. Local accept_seen 1344, 1936, 1697, 2128, 1316, 851, 1814, 1829, 1444, 1661. Mean 1,602 tx/s. The 18:59:59Z second was not in every log, so it is left out. By 19:00:50Z those senders were at submit 0 and depth 4,032, because the node was gone.
+
+| Node | Mempool | Normal fee |
+|---|---:|---:|
+| vector-10.kaspa.green | 263 | 100 |
+| proton-10.kaspa.stream | 36 | 100 |
+| electron-10.kaspa.blue | 36 | 100 |
+| muon-10.kaspa.blue | 466 | 148 |
+| quark-10.kaspa.red | 36 | 100 |
+| neutrino-10.kaspa.stream | 36 | 100 |
+| desk node | not read | the socket was closed |
+
+Indexer at the same read: `isSynced` true, `acceptedTxBlockTimeDiff` 3 seconds, `blueScoreDiff` 14.
+
+The node was started again at 19:01:33Z with the same flags, including the UTXO index, and without a RAM scale. It reached synced with the UTXO index on and mempool 0. The 18 miners were started again, one thread each, suffix `stp grok build`, priority BelowNormal. The ten round-5 senders were stopped so they would not submit the old pipe into the new process.
+
+### Round 6, ten senders, started 2026-10-08T19:02:53Z
+
+Same shape as round 5. Ten senders, u01 through u10, parts 0/10 through 9/10. Target 504 tx/s each. Desk node. Depth 4. Four connections. Fee frozen at 100 and 150. Per-transaction logging off. Armed for 2,728 seconds so the planned end stays 19:48:19Z.
+
+Lane counts: 1008, 876, 1008, 797, 864, 868, 1008, 836, 1008, 830.
+
+Opening aligned seconds, all ten logs, 0 rejects:
+
+| UTC | Submit | Local accept_seen |
+|---|---:|---:|
+| 19:02:58 | 5040 | 2139 |
+| 19:02:59 | 5040 | 1958 |
 
 ### Runs left unscored
 
