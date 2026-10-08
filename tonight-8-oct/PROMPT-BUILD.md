@@ -42,7 +42,7 @@ No key, no seed, no address, and no txid in that PDF. This section does not arm 
 
 ## Wait
 
-Until 18:00:00Z, do not spend, do not launch a sender, and do not edit the public storm repo. Confirm three things in one reply, then wait:
+Until 18:00:00Z, do not spend, do not launch a sender, and do not edit the public storm repo. The only later edit of that repo is the section **After 20:00 UTC**, and only the two files named there. Confirm three things in one reply, then wait:
 
 1. You are on the desk, TN10 only, Build wallet only.
 2. The older fleet halt file still says halt.
@@ -92,6 +92,20 @@ The row stays a count row. Do not add tx ids to it.
 
 When the bot prints a block, copy that block into the same file in the bot column. Push counts and times. Leave ids, keys, seeds, and addresses out.
 
-At 19:40 UTC start the Friday call table already in that file. At 20:00 UTC write the stop line, push, and stop. Leave the halt file in place. Leave the public result sections empty.
+At 19:40 UTC start the Friday call table already in that file. At 20:00 UTC write the stop line and push the private repo. Leave the halt file in place. Leave the public result sections empty. Then do the next section. That is the last act. Then stop.
+
+## After 20:00 UTC, the questions repo
+
+The real test is not tonight. Tonight's numbers go in as the checkout, so the real-test prompt can be written from them.
+
+Write exactly two files in https://github.com/STP-KAS/tn10-storm-throughput-questions . Write no other file in that repo. Do not fill the Build result or the bot result.
+
+1. Replace the body of `plan/AFTER-8-OCT.md` with the three blocks that file already names.
+   - The 8 Oct updates, cited by the commit SHA of https://github.com/STP-KAS/grok-bot-build-combo that you just read.
+   - The checkout result. Counts and times. The bot's printed blocks, copied. If a block was not printed, **not measured**. If the sample did not run, say skipped, and why.
+   - Kaspa Pulse's input. The 8 Oct note, plus anything new he sent during or after the checkout. If nothing new arrived, write **no new input**. Do not invent a sentence for him. Do not ping him.
+2. Then write `plan/GROK-BUILD-PROMPT-AFTER-8-OCT.md` for the real test. Only from that note and from `plan/NEXT-STORM-PLAN.md`. The plan wins. Follow the limits already written in the prompt file: do not move T0 unless a gate failed, do not name the hours after 00:25, do not change N or the fee or the share from a skip, keep the per-minute line, do not drop the per-second log.
+
+Do not paste the new prompt. Do not replace `plan/GROK-BUILD-PROMPT.md`. That replacement is stp's sentence, later. No key, no seed, no address, no txid. This section does not arm a spend.
 
 Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
