@@ -12,7 +12,7 @@ This paste is the checkout. The Friday paste is the other file, `PROMPT-BUILD.md
 
 ## Clocks that are not this paste
 
-Kaspa Pulse, 8 Oct 2026, read the checkout PDF. He called it solid. He counts **tonight 18:00–20:00 UTC**. That is this window. Do not redesign the PDF. Add the minute table below.
+Kaspa Pulse, 8 Oct 2026, read the checkout PDF. He called it solid. He counts **tonight 18:00–20:00 UTC**. That is this window. Do not redesign the PDF. Update the one you already made. The rules are in the next section.
 
 stp's DM the same morning named **20:00 UTC** as the aim for tonight's pre-test, after a desk resync, disk work, and usage limits. That sentence is not a new start. 20:00 UTC is the stop. A resync, a disk job, or a limit does not slide this window. If the desk is down at 18:00, write **not measured** and keep the senders off. Do not start a sender at 20:00 to meet the DM. His counter for tonight ends at 20:00. A send that starts then is outside it.
 
@@ -21,6 +21,24 @@ His line that the 9th works does not arm Friday. Friday stays the other file. A 
 7 Oct is closed on his word. Last submit 18:38:39 UTC. His window started 18:53. He counted the chain after the run. No conflict. Do not explain it. Do not call a figure a ceiling.
 
 The five hours after 00:25 UTC are a Friday choice. Do not name them in this paste.
+
+## Update the checkout PDF you made from this git
+
+You made that PDF from https://github.com/STP-KAS/grok-bot-build-combo . It is behind main. Update that same file before 19:50 local. Do not make a second PDF. Do not change the layout he already called solid. Do not send it to him.
+
+Source is current main. The folder is `tonight-8-oct`, plus the two prompts at the repo root. If the PDF and main disagree, main wins. If main and the measurement plan disagree, stop and ask stp. The plan wins.
+
+Write only what main changed on 8 Oct:
+
+- Tonight stays 18:00–20:00 UTC. 20:00 is the stop.
+- Friday T0 stays 21:30 UTC. First load 21:40. End 05:30 Saturday. His counter is 21:25 Friday through 05:35 Saturday.
+- The DM times 20:00 UTC tonight and 21:00 UTC Friday are not the clocks. Do not print them as the plan.
+- Per minute, per sender: tx sent, the node by name, five tx ids. The id cells stay empty until a sample runs. Do not invent ids.
+- 7 Oct is closed. Last submit 18:38:39 UTC. His window started 18:53. No conflict.
+- The hours after 00:25 UTC stay unnamed. The PDF says the choice is open: name them, or end the storm at 00:25. Do not pick.
+- Credit him. Comparison comes to us first.
+
+No key, no seed, no address, and no txid in that PDF. This section does not arm a spend.
 
 ## Wait
 
