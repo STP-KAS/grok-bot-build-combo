@@ -10,6 +10,10 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026. The combo has not been run. This page does not give the storm GO, does not lock the plan, and does not start a sender.
 
+## Node split, 8 Oct 2026
+
+[TWO-NODES.md](TWO-NODES.md) is the forward rule. The bot uses n0 when n0 is synced. Build uses its own desk node on every step. The goal is the highest included tx/s the two can hold together. The root table below is the earlier paste. Where they disagree on the node, TWO-NODES.md wins.
+
 ## Tonight, Thursday 8 Oct 2026
 
 Checkout, 20:00–22:00 local (18:00–20:00 UTC). The folder is [tonight-8-oct](tonight-8-oct/README.md). Paste [PROMPT-BOT.md](tonight-8-oct/PROMPT-BOT.md) into the bot and [PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md) into Grok Build at 19:50 local. The morning monitor reading is in [RESULTS.md](tonight-8-oct/RESULTS.md). Kaspa Pulse's input is in [PULSE.md](tonight-8-oct/PULSE.md). Tonight is not the storm. The root prompts below are the Friday paste.
