@@ -75,7 +75,7 @@ Due every 10 minutes. Status stays **not measured** until that UTC is read. The 
 | 19:30 | R5 | not measured | up | 10 | not measured | 647.9 | not measured | not measured | −0.1109 s | not measured | not measured | 1706 | 1665 | see the 19:30 read | synced, lag 1 s, blueScoreDiff 44 | round 7, depth at cap, 0 rejects |
 | 19:40 | R5 | not measured | up | 10 | not measured | 649.7 | not measured | not measured | −0.1113 s | not measured | not measured | 2225 | 2165 | see the 19:40 read | synced, lag 83 s, blueScoreDiff 66 | round 7, depth at cap, 0 rejects |
 | 19:50 | R5 | not measured | up | 10 | not measured | 650.2 | not measured | not measured | −0.1118 s | not measured | not measured | 1780 | 1724 | see the 19:50 read | synced, lag 34 s, blueScoreDiff 98 | round 9, depth at cap, 0 rejects |
-| 20:00 | stop | not measured | up | 0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | 0 | 0 | not read | not read | x10 stopped 19:57:41Z. Ten restored 20:04:50Z through 20:13:37Z. Node was up at the 20:02:27Z read. |
+| 20:00 | stop | not measured | up | 0 | not measured | not measured | not measured | not measured | not measured | not measured | not measured | 0 | 0 | not read at 20:00 | not read at 20:00 | Senders were 0 from 19:57:41Z until 20:04:50Z, so this mark's rate is 0. Late read is below. The ordered hour runs to 20:13:37Z. |
 
 ### Row 18:20, read 2026-10-08T18:20:20Z
 
@@ -493,6 +493,26 @@ Rates are ten aligned seconds from 19:49:55Z through 19:50:05Z. The 19:50:01Z se
 | desk node | 33205 | 183 |
 
 The senders are still on the fee frozen at the arm, 100 and 150. The desk quote is 183, still under 200. Indexer: `isSynced` true, `acceptedTxBlockTimeDiff` 34 seconds, `blueScoreDiff` 98.
+
+### Row 20:00, late read 2026-10-08T20:07:37Z
+
+The checkout mark says stop. The ten from round 9 were already stopped at 19:57:41Z, and round 10 was armed at 20:04:50Z. At 20:00:00Z the sender count was 0, so the table rate stays 0. This read is the restored ten, still running through 20:13:37Z. The desk node was up. Free RAM 4.7 GB at 20:07:17Z. Halt file first line `halt`. Miners 18, not switched. Disk free 650.8 GB. Sender count 10.
+
+Desk NTP vs time.windows.com, five samples from 20:07:37Z: −0.1117542 s, −0.1118048 s, −0.1115265 s, −0.1117674 s, −0.1114133 s. Mean −0.1117 s. Usage was not measured.
+
+Rates are eleven aligned seconds, 20:06:55Z through 20:07:05Z, all ten logs, 0 rejects. Submit 1815, 1140, 2712, 2980, 2429, 1635, 1614, 1645, 3165, 1941, 2492. Mean 2,142.5 tx/s. Local accept_seen 1847, 1088, 2796, 2870, 2155, 1631, 1614, 1607, 3293, 1663, 2492. Mean 2,096.0 tx/s. Each sender's depth sat on its own lane cap.
+
+| Node | Mempool | Normal fee |
+|---|---:|---:|
+| vector-10.kaspa.green | 13807 | 180 |
+| proton-10.kaspa.stream | 13583 | 179 |
+| electron-10.kaspa.blue | 13583 | 179 |
+| muon-10.kaspa.blue | 12509 | 180 |
+| quark-10.kaspa.red | 13322 | 179 |
+| neutrino-10.kaspa.stream | 13583 | 179 |
+| desk node | 34905 | 183 |
+
+The senders are still on the fee frozen at the 20:04:50Z arm, 100 and 150. The desk quote is 183, still under 200. Indexer: `isSynced` true, `acceptedTxBlockTimeDiff` 17 seconds, `blueScoreDiff` 20. One sample. The freeze line is lag above 120 seconds and rising.
 
 ### Runs left unscored
 
