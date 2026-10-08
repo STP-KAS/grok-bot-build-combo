@@ -44,11 +44,15 @@ One clean run first. Go through the numbers. Then weekly. Do not stack runs befo
 
 The clean run is Friday 9 Oct 2026, 21:30 UTC, for 8 hours, ending Saturday 10 Oct 2026, 05:30 UTC. If that day is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours. Ping him after that run. Tonight is the checkout in front of it, not the clean run, and not a weekly repeat.
 
-## 7 Oct compare, still open
+On 8 Oct he said the 9th works. That confirms the day he will count. It does not close the open gates, and it does not retire the Monday fallback.
+
+## 7 Oct compare, closed 8 Oct
 
 He asked to line up one window before anyone treats a lower chain count, or the 2,750 figure with a pool near 9.7k, as a ceiling. He wanted start, end, target tx/s, sent against accepted, which node, and sample ids.
 
-Our log does not cover 18:52–19:23 UTC. The last submit is 18:38:39 UTC. The included_s sum 2,753 is 15:20:32 UTC. Mempool 9747 is 15:25:33 UTC. Those are not one minute. The pool name on the 9747 line is missing. Tonight does not invent that window, and it does not call either figure a ceiling.
+Our log does not cover 18:52–19:23 UTC. The last submit is 18:38:39 UTC. The included_s sum 2,753 is 15:20:32 UTC. Mempool 9747 is 15:25:33 UTC. Those are not one minute. The pool name on the 9747 line is missing.
+
+Closed by his 8 Oct note, below. His window started 18:53. He counted the chain after the run. No conflict. Nothing to explain away. Neither figure is a ceiling. Tonight does not invent that window.
 
 His side counts the chain only. Nothing in this checkout touches his counter.
 
@@ -56,10 +60,28 @@ His side counts the chain only. Nothing in this checkout touches his counter.
 
 Friday's clean run can be read by him only if the logger actually emits the fields. Tonight's sample, when it runs, is the proof of the logger: per-second submitted and accepted, named pools, latency, NTP at both ends, and a match count on n0. The sheet is [MONITOR.md](MONITOR.md).
 
-Tonight also keeps his cadence. The sample is 15 minutes, under a 250 tx/s cap, with miners left as they are. It is not a second storm.
+The 8 Oct note adds three fields on top of that log. They do not replace it. Per minute: tx sent, the node that sender posted to, and five tx ids in the local log. Git still gets the count, not the ids.
+
+Tonight also keeps his cadence. The sample is 15 minutes, under a 250 tx/s cap, with miners left as they are. It is not a second storm. He called a soft run tonight smart. This checkout is that soft run.
 
 ## Later note
 
-Blank, for a note from him if one arrives before Friday. Nothing is written here until then.
+8 Oct 2026, X DM, after he read the checkout PDF.
+
+He said the PDF is solid, and thanks for the credit. The 9th works on his side. A soft run tonight, bot and Build together, is what he wants counted. That soft run is this checkout. It is not a second storm, and it is not a new question to him.
+
+He counts tonight **18:00–20:00 UTC**, and Friday **21:25 UTC through Saturday 10 Oct 2026 05:35 UTC**, two nodes, a few minutes either side of our window. Comparison comes to us first. This page does not ping him. This page does not send him the sheet.
+
+Three fields, so the comparison can be read:
+
+1. Per minute, how many tx the senders sent. His column is accepted. Ours is sent.
+2. Which node each sender talks to. n0, or a named public node. Mempool is per node. Build's senders are the public ones. The bot's senders are n0. Neither side writes "public" and stops there.
+3. A handful of tx ids per minute. Read here as five, spread across the minute, not the first five. He checks them on chain one by one. Ids stay out of git. They stay in the local log and in the checkout sheet.
+
+Before Friday he flagged the paced table. It ends 00:25 UTC. The window runs to 05:30. The PDF leaves those hours with no named phase. He asked for one of two: name them (long hold, max, drain), or end the storm at 00:25. This page does not choose. The plan still wins. stp chooses in the storm GO. The prompts do not fill those hours, and they do not end the storm early.
+
+The DM times 20:00 UTC tonight and 21:00 UTC Friday were stp's aim under a resync, disk work, and usage limits. They are not the windows he then pointed his counter at, and they are not the plan. Tonight stays 18:00–20:00 UTC. Friday T0 stays 21:30 UTC. His Friday counter starts five minutes before T0 and ends five minutes after our end.
+
+Nothing else is asked of him.
 
 Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
