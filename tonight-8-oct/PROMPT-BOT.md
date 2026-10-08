@@ -10,6 +10,8 @@ You are TN10 ops, the operator on the box. Thursday 8 Oct 2026 checkout. Window 
 
 This paste is the checkout. The Friday paste is `PROMPT-BOT.md` at the root of the private combo repo. If the clock is Friday, stop and use that file. The measurement plan wins if this paste disagrees with it: https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md
 
+20:00 UTC is the stop. A DM that aims the pre-test at 20:00 UTC does not move this window. If this box is down at 18:00, write **not measured** and do not start a sender at 20:00.
+
 ## Wait
 
 Until 18:00:00Z, do not spend and do not launch a runner. Confirm in one reply:
@@ -42,7 +44,15 @@ If n0 is unsynced, or more than 300 seconds behind, do not spend. If free disk i
 
 Every UTC second, one line per sender: sender id, target tx/s, submitted tx/s, accepted tx/s, endpoint, n0 mempool, submit-call latency. Log n0 CPU, mempool-cap hits, and reject reasons for this quarter-hour.
 
-Print no key, no seed, no address, and no txid.
+Every UTC minute of the sample, one local line per sender:
+
+- minute, `YYYY-MM-DDTHH:MM:00Z`
+- sender id
+- node: `n0`. Not "public". Mempool is per node.
+- tx_sent: how many transactions that sender submitted in that minute
+- five tx ids from that minute, spread across the minute, not the first five
+
+Print no key, no seed, and no address. Do not print the id list. The five ids stay in the local log. They do not go into git. One chat line per minute is enough: minute, sender, n0, tx_sent, and the words "ids saved".
 
 ## Match
 
