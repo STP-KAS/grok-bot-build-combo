@@ -27,6 +27,10 @@ The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn1
 
 Each prompt is for one side. Neither spends the other wallet.
 
+## Prompt bot reset
+
+Paste [PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md) when usage resets on 8 Oct 2026. The goal is three readings from the box: free disk, the box dry run, and the n0 match. It does not replace [PROMPT-BOT.md](PROMPT-BOT.md) or tonight's paste.
+
 ## Clock
 
 T0 is **21:30 UTC**. The first load step is **10 minutes later**.
