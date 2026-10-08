@@ -25,6 +25,8 @@ A storm GO is a different sentence, for Friday, and it needs `steps-utc.json`. T
 
 If rehearsal GO arrives after 18:45 UTC, skip the sample. Finish the checks. Write the skip in the Friday call.
 
+A DM on 8 Oct that aims the pre-test at 20:00 UTC does not move this window. 20:00 UTC is the stop. His counter for tonight is 18:00–20:00 UTC. A send that starts at the stop is outside it.
+
 ## Phases
 
 | Phase | Local | UTC | Lane senders | Work |
@@ -66,7 +68,15 @@ Every UTC second of the sample, one line per sender:
 - the local pool and each public pool, each named
 - submit-call latency
 
-On a sample of transactions, and on every reject: submit time and accept time. The ids stay in the local log. The git line is the count.
+Every UTC minute of the sample, one local line per sender, on top of the second log:
+
+- minute, `YYYY-MM-DDTHH:MM:00Z`
+- sender id
+- node: Build names the public TN10 node. The bot names n0. Not the word "public".
+- tx_sent: submissions by that sender in that minute
+- five tx ids, spread across the minute, not the first five
+
+On a sample of transactions, and on every reject: submit time and accept time. The ids stay in the local log and in the checkout sheet. The git line is the count.
 
 NTP offset at 18:00 UTC and at 20:00 UTC, on the box and on the desk.
 
@@ -93,6 +103,7 @@ Friday stays the clean run when every line below is **pass**, or is a line stp w
 | Arm file | `fee2h` was not used as a GO. |
 | Public results | The public result sections are still empty. |
 | Plan | Still unlocked. Lock SHA still blank. `steps-utc.json` still absent. Storm GO still absent. |
+| Phases after 00:25 | Still unnamed. Storm GO either names them or ends the storm at 00:25. This page does not choose. |
 
 If the bot disk is under 28 GB, or n0 is unsynced, or a session died, the call says Friday is not ready and the written fallback is Monday 13 Oct 2026, 21:30 UTC. stp decides. This file does not.
 
@@ -101,8 +112,9 @@ If the bot disk is under 28 GB, or n0 is unsynced, or a session died, the call s
 - Fee for the long hold stays 200 and 300 sompi/gram. Cap 600.
 - Build's Friday share stays 25% on the paced steps. Four fixed senders. The long hold and the uncapped max also use the synced desk node, two signers per physical machine.
 - The bot's Friday runners stay six, plus a seventh only on the max step.
-- T0 Friday is 21:30 UTC. B0 is 10 minutes. Lane senders off in B0. First paced load is 21:40 UTC.
-- The paced table is 2 h 55 min and ends 00:25 UTC Saturday. The storm window continues to 05:30 UTC. The hours after the table have no named phase.
+- T0 Friday is 21:30 UTC. B0 is 10 minutes. Lane senders off in B0. First paced load is 21:40 UTC. The 21:00 UTC in the 8 Oct DM is not T0.
+- The paced table is 2 h 55 min and ends 00:25 UTC Saturday. The storm window continues to 05:30 UTC. The hours after the table have no named phase. On 8 Oct he asked to name them or end the storm at 00:25. That choice is not made here.
+- His counter, same day: tonight 18:00–20:00 UTC, and Friday 21:25 UTC through Saturday 05:35 UTC, two nodes. That is his clock. It does not move T0. Comparison comes to us first.
 - Kaspa Pulse counts the chain on his side, sends the comparison first, and stays out of the setup.
 
 Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
