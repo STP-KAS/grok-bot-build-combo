@@ -18,6 +18,14 @@ Kaspa Pulse asked for one clean run first, then the numbers, then weekly repeats
 
 A multi-hour send tonight would be a second run stacked in front of Friday. The chain sample inside this window is 15 minutes, and only after stp says **rehearsal GO**.
 
+## 8 Oct, after he read the PDF
+
+He counts this same 18:00–20:00 UTC window, and Friday 21:25 UTC through Saturday 05:35 UTC. Comparison comes to us first. The pastes now ask for one extra local line per minute: tx sent, the node (`n0` or a named public node), and five tx ids. Git still gets no ids.
+
+The DM times 20:00 UTC tonight and 21:00 UTC Friday are not these clocks. 20:00 UTC tonight is the stop. Friday T0 stays 21:30 UTC.
+
+The hours after 00:25 UTC are still unnamed. He asked to name them or end the storm at 00:25. This folder does not choose. The note is [PULSE.md](PULSE.md).
+
 ## Files
 
 | Read | When |
@@ -26,7 +34,7 @@ A multi-hour send tonight would be a second run stacked in front of Friday. The 
 | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Paste into Grok Build on the desk at 19:50 local. |
 | [PROMPT-BOT.md](PROMPT-BOT.md) | Paste into the Grok bot on the box at 19:50 local. |
 | [MONITOR.md](MONITOR.md) | What is watched, who writes it, and what passes. |
-| [PULSE.md](PULSE.md) | Kaspa Pulse's input, and the blank line for a later note from him. |
+| [PULSE.md](PULSE.md) | Kaspa Pulse's input, including the 8 Oct note. |
 | [RESULTS.md](RESULTS.md) | The monitor. The morning reading from this session is filled in. The evening rows wait for 18:00 UTC. |
 
 The Friday paste-ins stay [PROMPT-BUILD.md](../PROMPT-BUILD.md) and [PROMPT-BOT.md](../PROMPT-BOT.md) at the repo root. Those files wait for a storm GO and for `steps-utc.json`. They are the wrong paste for tonight.
