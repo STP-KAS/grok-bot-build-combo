@@ -34,6 +34,7 @@ The hours after 00:25 UTC are still unnamed. He asked to name them or end the st
 | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Paste into Grok Build on the desk at 19:50 local. |
 | [PROMPT-BOT.md](PROMPT-BOT.md) | Paste into the Grok bot on the box at 19:50 local. |
 | [MONITOR.md](MONITOR.md) | What is watched, who writes it, and what passes. |
+| [MONITOR-PLAN.md](MONITOR-PLAN.md) | The same demands in one list, each with the page it already comes from. |
 | [PULSE.md](PULSE.md) | Kaspa Pulse's input, including the 8 Oct note. |
 | [RESULTS.md](RESULTS.md) | The monitor. The morning reading from this session is filled in. The evening rows wait for 18:00 UTC. |
 
