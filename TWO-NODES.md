@@ -12,7 +12,7 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 **Start.** Sending this GitHub to Grok Build or to the bot means go: start the operation.
 
-**The bot's runner.** It uses desk node B, the second kaspad on the desk. It runs only during the storm. Outside the storm it stays off. Network `testnet-10`. UTXO index on. On the desk the runner uses Borsh `ws://127.0.0.1:17310`. From the box it uses the node B tunnel in the desk handoff, and only after that handoff lists one. It sends only while node B is synced and its tip lag is at or under 300 seconds. A short box disk stops the bot and does not stop Build.
+**The bot's runner.** It uses desk node B, the second kaspad on the desk. It runs only during the storm. Outside the storm it stays off. Network `testnet-10`. UTXO index on. On the desk the runner uses Borsh `ws://127.0.0.1:17310`. stp provides the tunnel when node B is ready for the bot. Until that tunnel is in hand, the box runner waits. It sends only while node B is synced and its tip lag is at or under 300 seconds. A short box disk stops the bot and does not stop Build.
 
 **Build.** Build keeps locus, the first desk kaspad, on loopback Borsh, while locus is synced and the UTXO index is on.
 

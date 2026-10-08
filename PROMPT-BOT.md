@@ -22,7 +22,7 @@ Stop unless all three are true:
 
 Read free disk on this box before T0. Go only with at least 35 GB free. From 28 to 35 GB, the steps shrink to 10 minutes and that is written down as a deviation. Below 28 GB, no storm. Keep about 19 GB free for n0 pruning. A guard stop ends the run for the box and for Build.
 
-Confirm desk node B is synced and its tip lag is at or under 300 seconds. If it is not, stop. The runner runs only during the storm. On the desk it uses Borsh `ws://127.0.0.1:17310`. From the box it uses the node B tunnel in the desk handoff, after that handoff lists one.
+Confirm desk node B is synced and its tip lag is at or under 300 seconds. If it is not, stop. The runner runs only during the storm. On the desk it uses Borsh `ws://127.0.0.1:17310`. stp provides the tunnel when node B is ready for the bot. Until that tunnel is in hand, the box runner waits.
 
 The box dry run is still open. If the storm GO does not name it as left open, stop and ask.
 
