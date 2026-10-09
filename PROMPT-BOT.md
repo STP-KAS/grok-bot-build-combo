@@ -2,7 +2,7 @@
 
 Paste this into the Grok bot. Sending this GitHub to Grok Build or to the bot means go: start the operation. This file does not lock the questions plan and does not spend. The node order is [TWO-NODES.md](TWO-NODES.md).
 
-If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md), stop and ask stp. The plan wins. [BOT-TPS.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/BOT-TPS.md) is rate advice from the desk pre-run. It is not this prompt.
+If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md) on a clock, a fee, or a question, stop and ask stp. The plan wins. If they disagree on the node, [TWO-NODES.md](TWO-NODES.md) wins. [BOT-TPS.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/BOT-TPS.md) is rate advice from the desk pre-run. It is not this prompt.
 
 ## Goal
 
@@ -20,9 +20,9 @@ Stop unless all three are true:
 2. `steps-utc.json` is in hand. Do not invent the timetable. Box and Build use the same UTC times.
 3. The clock is at or after the first time in that file.
 
-Read free disk on this box before T0. Go only with at least 35 GB free. From 28 to 35 GB, the steps shrink to 10 minutes and that is written down as a deviation. Below 28 GB, no storm. Keep about 19 GB free for n0 pruning. A guard stop ends the run for the box and for Build.
+Read free disk on this box before T0. Go only with at least 35 GB free. From 28 to 35 GB, the steps shrink to 10 minutes and that is written down as a deviation. Below 28 GB, this side does not send. n0 will not run, so do not keep disk aside for n0 pruning. A short box disk stops this side and does not stop Build.
 
-Confirm desk node B is synced and its tip lag is at or under 300 seconds. If it is not, stop. The runner runs only during the storm. On the desk it uses Borsh `ws://127.0.0.1:17310`. stp provides the tunnel when node B is ready for the bot. Until that tunnel is in hand, the box runner waits.
+n0 will not run. Do not start it and do not resync it. This side's runner and this side's miners use the tunnel to **keel**, the second desk kaspad. Build uses locus. keel was still in block download at 2026-10-09T07:59:26Z (69%, not synced). It stays in the score. While it is unsynced, or the handoff has no tunnel, or tip lag is over 300 seconds, sender count stays 0 and the row says `waiting`. Check again on the next 10-minute row. Do not invent a tunnel host. From this box, do not use `127.0.0.1`. The desk sockets `ws://127.0.0.1:17310` and `127.0.0.1:16310` are keel's own ports. They are not this box's addresses.
 
 The box dry run is still open. If the storm GO does not name it as left open, stop and ask.
 
@@ -32,7 +32,7 @@ The hours from 00:25 UTC to 05:30 UTC have no named phase. If the storm GO does 
 
 - TN10 only. Network `testnet-10`.
 - The Bot wallet only. Do not spend the Build wallet.
-- Send through desk node B only, and only during the storm. `bore.pub` and `159.223.110.159` stay closed.
+- Send through keel only, through the tunnel, and only during the storm. `bore.pub` and `159.223.110.159` stay closed. n0 stays off.
 - Six runners, four connections each, for the paced steps. A seventh runner only on the max step. Never eight.
 - Build's share of each paced step is 25%. This side sends the rest. The max step is uncapped for both.
 - Depth 2 on a long step. Freeze the fee near the loaded quote. The pair that held on the desk was 200 and 300 sompi/gram, cap 600. Each signer uses its own coins.
@@ -48,11 +48,11 @@ The first TPS step is the 2× load at **21:40 UTC**. Hold each load step for 15 
 
 The miners-off control is the same 2× target with the miners off. The box scheduler switches the box miners. Log the switch. Do not invent a different time.
 
-Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. Match Build's ids on desk node B. That match is this side's job.
+Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. Match this side's own ids on keel. Build matches its own ids on locus. A waiting minute has no match to owe.
 
-Point the miners at desk node B. On the desk that is gRPC `127.0.0.1:16310`. Coinbase pays the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. Mine only while node B is synced.
+Point this side's miners at keel through the same tunnel, gRPC host and port from the handoff. Coinbase pays the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. Mine only while keel is synced and the handoff lists the tunnel. Until then the miners stay off. Do not point them at n0.
 
-The next run's monitor is [plan/NEXT-RUN-MONITOR.md](https://github.com/STP-KAS/tn10-locus/blob/main/plan/NEXT-RUN-MONITOR.md). Print one block every 10 minutes for the desk to copy: UTC, phase, session, sender count, box disk GB, NTP offset, usage or **not measured**, node B synced, node B lag seconds, node B mempool, node B CPU, submit tx/s, accepted tx/s, rejects, miner count. If node B is unsynced or lag is over 300 seconds, sender count is 0 and the block says `waiting`. A missing block stays **not measured** and fails this side's part of the pass. The runner stays off outside the storm.
+The next run's monitor is [plan/NEXT-RUN-MONITOR.md](https://github.com/STP-KAS/tn10-locus/blob/main/plan/NEXT-RUN-MONITOR.md). Print one block every 10 minutes for the desk to copy: UTC, phase, session, sender count, box disk GB, NTP offset, usage or **not measured**, keel synced, keel lag seconds, keel mempool, keel CPU, submit tx/s, accepted tx/s, rejects, miner count. If keel is unsynced, the tunnel is missing, or lag is over 300 seconds, sender count is 0 and the block says `waiting`. A missing block stays **not measured** and fails this side's part of the pass. The runner stays off outside the storm.
 
 ## Minute log, on top of the per-second log
 
@@ -60,7 +60,7 @@ Every UTC minute, one local line per sender:
 
 - minute, `YYYY-MM-DDTHH:MM:00Z`
 - sender id
-- node: `desk-nodeB`
+- node: `keel`
 - tx_sent: submissions by that sender in that minute
 - five tx ids from that minute, spread across it, not the first five
 

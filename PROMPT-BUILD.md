@@ -40,7 +40,7 @@ Stop unless all three are true:
 2. `steps-utc.json` is in hand. Do not invent the timetable.
 3. The clock is at or after the first time in that file.
 
-The n0 match, the box dry run, and 35 GB free on the bot disk are still open. If the storm GO does not name any of those it is leaving open, stop and ask.
+n0 will not run. Do not wait on an n0 match and do not send this side to n0. The box dry run and 35 GB free on the bot disk are still open. If the storm GO does not name either of those as left open, stop and ask.
 
 The hours from 00:25 UTC to 05:30 UTC have no named phase. He asked to name them (long hold, max, drain) or to end the storm at 00:25. This file does not choose. If the storm GO does not choose, stop and ask before any send. Do not write names for those hours. Do not end the storm at 00:25 on your own.
 
@@ -59,7 +59,7 @@ T0 is 21:30 UTC. B0 is the first 10 minutes. Send nothing in B0, in the two sett
 
 The first TPS step is the 2× load at **21:40 UTC**. Hold each load step for 15 minutes, then drain at 0. Do not change rate, fee, depth, or process count inside a step.
 
-Point the miners at desk node B. On the desk that is gRPC `127.0.0.1:16310`. Coinbase pays the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. Mine only while node B is synced. Log the count at each phase start. The bot's runner uses that same node and runs only during the storm. Build keeps sending on locus.
+Build keeps sending on locus. The bot's runner and the bot's miners use the tunnel to keel, the second desk kaspad, and only while keel is synced. keel was still syncing at 2026-10-09T07:59:26Z (block download 69%). Leave the desk miners on locus until keel is synced. Do not point them at keel before that. Log the miner count at each phase start. The bot's miners are not this side's processes.
 
 Per-transaction logs stay on. Times are UTC with milliseconds and `Z`. The 8 Oct high-rate rounds turned that log off. This run does not.
 
@@ -71,7 +71,7 @@ Every UTC minute, one local line per sender:
 
 - minute, `YYYY-MM-DDTHH:MM:00Z`
 - sender id
-- node: the public TN10 name, or the desk node on the long hold and the uncapped max. Not the word "public". Not n0. This side never posts to n0. Mempool is per node.
+- node: `locus` on every step. Not a public name. Not n0. Not keel. Mempool is locus.
 - tx_sent: how many transactions that sender submitted in that minute
 - five tx ids from that minute, spread across it, not the first five. Five is the reading of "a handful". He checks them on chain one by one.
 

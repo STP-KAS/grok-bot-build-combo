@@ -1,5 +1,7 @@
 # Prompt build
 
+9 Oct 2026. This page is the 8 Oct prepare. It is not the forward node rule. n0 will not run. Build stays on locus. The bot's runner and the bot's miners use the tunnel to keel. See [TWO-NODES.md](TWO-NODES.md).
+
 Paste this into Grok Build on the desk when you receive it. stp is sending it early and will be away. This file does not start the storm and does not lock the plan.
 
 The steps you already have are [tonight-8-oct/PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md). This page is the goal, the miners, and the desk node. It is the same night as [PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md).

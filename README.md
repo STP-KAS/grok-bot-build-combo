@@ -12,9 +12,9 @@ The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026.
 
 **Start.** Sending this GitHub to Grok Build or to the bot means go: start the operation.
 
-## Node split, 8 Oct 2026
+## Node split, 9 Oct 2026
 
-[TWO-NODES.md](TWO-NODES.md) is the forward rule. The bot's runner uses desk node B, the second kaspad on the desk, and it runs only during the storm. Build uses locus, the first desk kaspad, on every step. Miners point at desk node B and pay the Grok Bot address `kaspatest:qzffl5xy9np46gkttyuftqnv2w04pr8g3wsp7c3vv8se3txtelx6q7c0v0ldx`. The goal is the highest included tx/s the two can hold together. The root table below is the earlier paste. Where they disagree on the node, TWO-NODES.md wins.
+[TWO-NODES.md](TWO-NODES.md) is the forward rule. The two desk nodes are **locus** and **keel**. locus is the first kaspad. Build uses it on every step. keel is the second kaspad, still syncing on 9 Oct 2026, and already in the score. The bot's runner and the bot's miners use the tunnel to keel. n0 will not run. The root table below is the earlier paste. Where they disagree on the node, TWO-NODES.md wins. Where they disagree on a clock, a fee, or a question, the questions plan wins.
 
 ## Tonight, Thursday 8 Oct 2026
 
@@ -22,20 +22,20 @@ Checkout, 20:00–22:00 local (18:00–20:00 UTC). The folder is [tonight-8-oct]
 
 On 8 Oct he read the checkout PDF and pointed his counter at that same 18:00–20:00 UTC, and at Friday 21:25 UTC through Saturday 05:35 UTC. Comparison comes to us first. The pastes now ask for a per-minute sent count, the node name, and five tx ids in the local log. Git still gets no ids. The DM times 20:00 UTC tonight and 21:00 UTC Friday are not these clocks.
 
-The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md). If this hub and that plan disagree, the plan wins.
+The measurement plan remains [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md). If this hub and that plan disagree on a clock, a fee, or a question, the plan wins. If they disagree on the node, [TWO-NODES.md](TWO-NODES.md) wins.
 
 ## Two prompts
 
 | Who | Paste this | Wallet | Where it sends |
 |---|---|---|---|
-| Grok Build, on the desk | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Build only | locus, the first desk kaspad |
-| Grok Bot, on the box | [PROMPT-BOT.md](PROMPT-BOT.md) | Bot only | desk node B, and only during the storm |
+| Grok Build, on the desk | [PROMPT-BUILD.md](PROMPT-BUILD.md) | Build only | locus |
+| Grok Bot, on the box | [PROMPT-BOT.md](PROMPT-BOT.md) | Bot only | keel, through the tunnel, and only during the storm |
 
 Each prompt is for one side. Neither spends the other wallet.
 
 ## Prompt bot reset
 
-Paste [PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md) when the link arrives. stp is sending it early. Prepare at once. If a run is required before the real test, do that run. The goal is the heavy test already written: full load, full monitoring, not announced. This page's job is three readings from the box: free disk, the box dry run, and the n0 match. It does not replace [PROMPT-BOT.md](PROMPT-BOT.md) or tonight's paste.
+[PROMPT-BOT-RESET.md](PROMPT-BOT-RESET.md) is the 8 Oct prepare page. Do not paste it to bring n0 back. n0 will not run. The forward paste is [PROMPT-BOT.md](PROMPT-BOT.md).
 
 ## Prompt build
 

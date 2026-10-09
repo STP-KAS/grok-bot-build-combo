@@ -1,6 +1,8 @@
 # Prompt bot reset
 
-Paste this into the Grok bot on the box when you receive it. stp is sending it early and will be away. This file does not start the storm and does not lock the plan.
+9 Oct 2026. Do not paste this page to bring n0 back. n0 will not run. The forward paste is [PROMPT-BOT.md](PROMPT-BOT.md). The two desk nodes are locus and keel. The bot's runner and the bot's miners use the tunnel to keel.
+
+Paste this into the Grok bot on the box when you receive it. stp is sending it early and will be away. This file does not start the storm and does not lock the plan. The lines below are the 8 Oct prepare. They are not the forward node rule.
 
 If this file disagrees with [NEXT-STORM-PLAN.md](https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md), stop and ask stp. The plan wins.
 
