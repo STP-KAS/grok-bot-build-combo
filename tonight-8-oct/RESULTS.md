@@ -6,11 +6,13 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 # Monitor results
 
-Private record for the Thursday 8 Oct 2026 checkout. Rules: [MONITOR.md](MONITOR.md). Clock: [PLAN.md](PLAN.md).
+Thursday 8 Oct 2026 checkout, opened to Kaspa Pulse (@gokugalax) on 9 Oct 2026. Rules: [MONITOR.md](MONITOR.md). Clock: [PLAN.md](PLAN.md).
 
 A figure is a reading from this session, or **not measured**. Ids, keys, seeds, and addresses stay out of this file.
 
 The public storm result sections stay empty. This file is not those sections.
+
+His count is what landed in blocks, seen by two nodes. The accept figures in this file are what the node took into its mempool. On the desk rounds that node is the desk node. pre8 and s7 posted to the nodes named on those rounds. The two counts are close. They are not the same number. The per-minute sheet is [minute.csv](minute.csv).
 
 ## Morning reading, before the window
 
@@ -140,6 +142,22 @@ The monitor list is [MONITOR-PLAN.md](MONITOR-PLAN.md). The plan cited for the r
 On the finished runs that wrote a summary line, the figure used for accepted is that line's `accept_seen`. Summing the per-second `accept_seen` field undercounts on this harness. That sum is not used for pre8 or s7. Round 3 was stopped before it wrote a summary, so its accept figure is the per-second sum.
 
 The real test is postponed. n0 was still syncing when round 4 started. These rounds are desk tests until that sync is done. They are not rehearsal GO, and they are not storm GO.
+
+## Per minute
+
+[minute.csv](minute.csv) is the sheet from his 9 Oct note. One row is one UTC minute of one round. The columns are `minute_utc`, `sent`, `accepted`, `rejects`, `senders`, `round`. No tx ids.
+
+`sent` is the sum of `submit_ok` on every loop tick in that minute. `accepted` is the sum of the per-second `accept_seen` field, once per tick. That field is mempool intake, not his block count. `rejects` is the reject count on those ticks. `senders` is how many sender logs have a tick in that minute. A minute with two rounds has two rows.
+
+pre8 `sent` sums to 55,490 and s7 `sent` sums to 195,076, the same as the summary lines. The per-second `accept_seen` sum undercounts those summary lines, so those `accepted` cells are empty. run30 and s15 have no summary line and the same undercount, so their `accepted` cells are empty too.
+
+A row with round `none` is a minute from 15:49 UTC through 20:11 UTC with no sender log. That includes the quiet minutes in the 19:00–19:13 gap and the 19:58–20:03 gap before a10. q10 is still logging in the 19:00 minute, and u10, z14, and m12 sit inside the gap, so those minutes are not `none`.
+
+The short arms between the numbered rounds are in the file under the step name in the log: run30, s15, mx, n12, p10, z14, m12. They are not another numbered round.
+
+The means in the round table are aligned seconds, a second that is present on every sender. This csv keeps every tick, including a second one sender missed. A round's `sent` sum is the per-sender total. It can sit above the aligned mean.
+
+His first look lined the rounds up with his minutes, start 18:01, stop 19:57. His peak minute is 19:43, the first full minute of x10 after w11. He puts his per-minute count beside all 10 rounds, the gap, and a10. That comparison comes to us first.
 
 ## Rounds
 

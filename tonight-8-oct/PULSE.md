@@ -82,6 +82,23 @@ Before Friday he flagged the paced table. It ends 00:25 UTC. The window runs to 
 
 The DM times 20:00 UTC tonight and 21:00 UTC Friday were stp's aim under a resync, disk work, and usage limits. They are not the windows he then pointed his counter at, and they are not the plan. Tonight stays 18:00–20:00 UTC. Friday T0 stays 21:30 UTC. His Friday counter starts five minutes before T0 and ends five minutes after our end.
 
+## 9 Oct 2026, after the checkout was opened
+
+X chat, the same morning. He had read the checkout.
+
+His first look: our rounds line up with his minutes. Start 18:01, stop 19:57. His peak minute is 19:43, right after w11.
+
+He will put his per-minute count next to all 10 rounds, including the 19:00–19:13 gap after the node crash and a10 at 20:04–20:11, and he sends that to us first. This page does not ping him. This page does not send him the sheet.
+
+Keep the two accepts apart. Ours is what the desk node took into its mempool. His is what landed in blocks, seen by two nodes. Close, and not the same number.
+
+Nothing on that first look jumped out as wrong.
+
+Two changes where the checkout was touched again:
+
+1. The header of [RESULTS.md](RESULTS.md) no longer says private record. The checkout is opened to him. The public storm result sections stay empty.
+2. [minute.csv](minute.csv) has one row per UTC minute per round. Columns: minute utc, sent, accepted, rejects, senders, round. No tx ids. `accepted` there is the mempool figure above, not his block count. On pre8 and s7 the per-minute accept cell is empty, because the per-second sum undercounts the summary line.
+
 Nothing else is asked of him.
 
 Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
