@@ -35,7 +35,7 @@ Both kaspad processes are on this desk. Network `testnet-10`. UTXO index on. Nei
 | The bot's miners | keel, through the tunnel | Only while keel is synced and the handoff lists the tunnel |
 | Grok Build | locus | While locus is synced and the UTXO index is on |
 
-The monitoring tasks are in [STP-KAS/tn10-locus](https://github.com/STP-KAS/tn10-locus) `plan/MONITOR.md`. If this page and `NEXT-STORM-PLAN.md` disagree on a clock, a fee, or a question, the questions plan wins. If they disagree on the node, this page wins.
+**Monitoring.** While keel is not synced, the desk watches the block download and the tunnel stays closed. When keel is synced, the desk opens the tunnel, writes both addresses in the handoff, and says them. That report is not the storm GO. From T0 the sheet is [STP-KAS/tn10-locus](https://github.com/STP-KAS/tn10-locus) `plan/MONITOR.md`, and the checklist is `plan/NEXT-RUN-MONITOR.md`. The desk writes the combined row. The box prints its block. A missing required line is **not measured**. A waiting keel minute adds 0 and is not a failed match. If this page and `NEXT-STORM-PLAN.md` disagree on a clock, a fee, or a question, the questions plan wins. If they disagree on the node, this page wins.
 
 `bore.pub` and `159.223.110.159` stay closed.
 
