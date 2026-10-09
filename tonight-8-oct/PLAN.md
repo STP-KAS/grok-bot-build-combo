@@ -6,7 +6,7 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 # Plan for Thursday night
 
-**Window.** Thursday 8 Oct 2026, 20:00–22:00 local (CEST, UTC+2). **18:00:00Z to 20:00:00Z.** Both sessions stop at 20:00 UTC even if a line is unfinished.
+**Window.** Thursday 8 Oct 2026, **18:00:00Z to 20:00:00Z.** Both sessions stop at 20:00 UTC even if a line is unfinished.
 
 **Goal.** Leave Friday able to be the one clean run Kaspa Pulse asked for. Friday T0 stays 21:30 UTC. This page is the checkout.
 
@@ -107,7 +107,7 @@ Friday stays the clean run when every line below is **pass**, or is a line stp w
 
 If the bot disk is under 28 GB, or n0 is unsynced, or a session died, the call says Friday is not ready and the written fallback is Monday 13 Oct 2026, 21:30 UTC. stp decides. This file does not.
 
-## Still true after 22:00 local
+## Still true after 20:00 UTC
 
 - Fee for the long hold stays 200 and 300 sompi/gram. Cap 600.
 - Build's Friday share stays 25% on the paced steps. Four fixed senders. The long hold and the uncapped max also use the synced desk node, two signers per physical machine.

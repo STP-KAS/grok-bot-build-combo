@@ -4,9 +4,11 @@
 
 Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are senders; runner is the setup; bot is reserved for the operator.
 
-# Thursday 8 Oct 2026, 20:00 local
+# Thursday 8 Oct 2026, 18:00 UTC
 
-Two hours. 20:00–22:00 local, CEST (UTC+2), which is **18:00–20:00 UTC**.
+Every clock time in this repo is UTC.
+
+Two hours. **18:00–20:00 UTC**.
 
 The storm stays **Friday 9 Oct 2026, 21:30 UTC, for 8 hours**, ending Saturday 10 Oct 2026, 05:30 UTC. If Friday is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours. This folder does not give the storm GO, does not lock the plan, and does not start a sender.
 
@@ -31,8 +33,8 @@ The hours after 00:25 UTC are still unnamed. He asked to name them or end the st
 | Read | When |
 |---|---|
 | [PLAN.md](PLAN.md) | The clock, the phases, and the Friday call. |
-| [PROMPT-BUILD.md](PROMPT-BUILD.md) | Paste into Grok Build on the desk at 19:50 local. |
-| [PROMPT-BOT.md](PROMPT-BOT.md) | Paste into the Grok bot on the box at 19:50 local. |
+| [PROMPT-BUILD.md](PROMPT-BUILD.md) | Paste into Grok Build on the desk at 17:50 UTC. |
+| [PROMPT-BOT.md](PROMPT-BOT.md) | Paste into the Grok bot on the box at 17:50 UTC. |
 | [MONITOR.md](MONITOR.md) | What is watched, who writes it, and what passes. |
 | [MONITOR-PLAN.md](MONITOR-PLAN.md) | The same demands in one list, each with the page it already comes from. |
 | [PULSE.md](PULSE.md) | Kaspa Pulse's input, including the 8 Oct note. |
@@ -40,12 +42,12 @@ The hours after 00:25 UTC are still unnamed. He asked to name them or end the st
 
 The Friday paste-ins stay [PROMPT-BUILD.md](../PROMPT-BUILD.md) and [PROMPT-BOT.md](../PROMPT-BOT.md) at the repo root. Those files wait for a storm GO and for `steps-utc.json`. They are the wrong paste for tonight.
 
-## At 19:50 local
+## At 17:50 UTC
 
 1. Paste [PROMPT-BOT.md](PROMPT-BOT.md) into the bot.
 2. Paste [PROMPT-BUILD.md](PROMPT-BUILD.md) into Grok Build.
 3. Both wait until 18:00 UTC.
 4. Say **rehearsal GO** only if the 15-minute sample should run. Silence means the two hours are checks and monitor rows, with the lane senders off.
-5. At 22:00 local, read the Friday call at the bottom of [RESULTS.md](RESULTS.md).
+5. At 20:00 UTC, read the Friday call at the bottom of [RESULTS.md](RESULTS.md).
 
 Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.

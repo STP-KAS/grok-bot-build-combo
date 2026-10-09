@@ -6,6 +6,8 @@ Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are sende
 
 # Combo: Grok Bot and Grok Build
 
+Every clock time in this repo is UTC. A clock is not written in local time.
+
 **Goal.** One TN10 test of both senders on one clock, after the usage reset. Friday 9 Oct 2026, 21:30 UTC, for 8 hours, ending Saturday 10 Oct 2026, 05:30 UTC. If that day is not ready, Monday 13 Oct 2026, 21:30 UTC, for 8 hours, ending Tuesday 14 Oct 2026, 05:30 UTC.
 
 The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026. The combo has not been run. This page does not lock the questions plan.
@@ -18,7 +20,7 @@ The usage reset for the bots and for Build is **OK**, on stp's word, 7 Oct 2026.
 
 ## Tonight, Thursday 8 Oct 2026
 
-Checkout, 20:00–22:00 local (18:00–20:00 UTC). The folder is [tonight-8-oct](tonight-8-oct/README.md). Paste [PROMPT-BOT.md](tonight-8-oct/PROMPT-BOT.md) into the bot and [PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md) into Grok Build at 19:50 local. The morning monitor reading is in [RESULTS.md](tonight-8-oct/RESULTS.md). Kaspa Pulse's input is in [PULSE.md](tonight-8-oct/PULSE.md). Tonight is not the storm. The root prompts below are the Friday paste.
+Checkout, 18:00–20:00 UTC. The folder is [tonight-8-oct](tonight-8-oct/README.md). Paste [PROMPT-BOT.md](tonight-8-oct/PROMPT-BOT.md) into the bot and [PROMPT-BUILD.md](tonight-8-oct/PROMPT-BUILD.md) into Grok Build at 17:50 UTC. The morning monitor reading is in [RESULTS.md](tonight-8-oct/RESULTS.md). Kaspa Pulse's input is in [PULSE.md](tonight-8-oct/PULSE.md). Tonight is not the storm. The root prompts below are the Friday paste.
 
 On 8 Oct he read the checkout PDF and pointed his counter at that same 18:00–20:00 UTC, and at Friday 21:25 UTC through Saturday 05:35 UTC. Comparison comes to us first. The pastes now ask for a per-minute sent count, the node name, and five tx ids in the local log. Git still gets no ids. The DM times 20:00 UTC tonight and 21:00 UTC Friday are not these clocks.
 

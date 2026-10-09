@@ -4,9 +4,9 @@
 
 Wording, Kaspa Pulse (@gokugalax), 7 Oct 2026: sign-and-send processes are senders; runner is the setup; bot is reserved for the operator.
 
-# Paste this into Grok Build at 19:50 local
+# Paste this into Grok Build at 17:50 UTC
 
-Thursday 8 Oct 2026 checkout. Window **18:00:00Z–20:00:00Z** (20:00–22:00 local, CEST). Stop at 20:00 UTC.
+Thursday 8 Oct 2026 checkout. Window **18:00:00Z–20:00:00Z**. Stop at 20:00 UTC.
 
 This paste is the checkout. The Friday paste is the other file, `PROMPT-BUILD.md` at the repo root. If the clock is Friday, stop and use that file. The measurement plan wins if this paste disagrees with it: https://github.com/STP-KAS/tn10-storm-throughput-questions/blob/main/plan/NEXT-STORM-PLAN.md
 
@@ -24,7 +24,7 @@ The five hours after 00:25 UTC are a Friday choice. Do not name them in this pas
 
 ## Update the checkout PDF you made from this git
 
-You made that PDF from https://github.com/STP-KAS/grok-bot-build-combo . It is behind main. Update that same file before 19:50 local. Do not make a second PDF. Do not change the layout he already called solid. Do not send it to him.
+You made that PDF from https://github.com/STP-KAS/grok-bot-build-combo . It is behind main. Update that same file before 17:50 UTC. Do not make a second PDF. Do not change the layout he already called solid. Do not send it to him.
 
 Source is current main. The folder is `tonight-8-oct`, plus the two prompts at the repo root. If the PDF and main disagree, main wins. If main and the measurement plan disagree, stop and ask stp. The plan wins.
 
